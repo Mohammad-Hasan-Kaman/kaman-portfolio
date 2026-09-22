@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}404 — Page not found{% endblock %}
+{% block content %}
+<section class="notfound" style="min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center">
+  <div class="container">
+    <h1 style="font-size:clamp(4rem,14vw,9rem);line-height:1;margin:0" class="accent">404</h1>
+    {% if LANG == 'fa' %}
+      <h2>این صفحه پیدا نشد.</h2>
+      <p style="opacity:.75">آدرس عوض شده یا هرگز وجود نداشته. از منوی بالا مسیر درست را انتخاب کن.</p>
+      <a class="btn btn-primary" href="{% url 'portfolio:home' %}">بازگشت به خانه</a>
+    {% elif LANG == 'ar' %}
+      <h2>لم يتم العثور على هذه الصفحة.</h2>
+      <p style="opacity:.75">العنوان تغيّر أو لم يكن موجودًا أبدًا. استخدم القائمة أعلاه للوصول إلى المكان الصحيح.</p>
+      <a class="btn btn-primary" href="{% url 'portfolio:home' %}">العودة إلى الرئيسية</a>
+    {% else %}
+      <h2>This page could not be found.</h2>
+      <p style="opacity:.75">The address may have changed or never existed. Use the menu above to find your way.</p>
+      <a class="btn btn-primary" href="{% url 'portfolio:home' %}">Back to home</a>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

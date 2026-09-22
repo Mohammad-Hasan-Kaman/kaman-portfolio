@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static portfolio_extras %}
+
+{% block title %}{% tf article 'title' %} — {% tf profile 'name' %}{% endblock %}
+
+{% block content %}
+<section class="section article-detail">
+  <div class="container article-container">
+    <a href="{% url 'portfolio:home' %}#articles" class="back-link reveal">← {{ t.articles.back }}</a>
+
+    <div class="detail-info reveal">
+      <span class="article-date">📅 {% if LANG == 'fa' %}{{ article.created_at|date:"Y/m/d" }}{% else %}{{ article.created_at|date:"d M Y" }}{% endif %}</span>
+      <h1 class="detail-title">{{ article.icon }} {% tf article 'title' %}</h1>
+      {% if article.cover %}<img class="article-hero-img" src="{{ article.cover.url }}" alt="{% tf article 'title' %}">{% endif %}
+      <div class="article-content">
+        {% if LANG == 'fa' and article.body_fa %}{{ article.body_fa|linebreaks }}
+        {% elif LANG == 'ar' and article.body_ar %}{{ article.body_ar|linebreaks }}
+        {% else %}{{ article.body_en|linebreaks }}{% endif %}
+      </div>
+      <a href="{% url 'portfolio:home' %}#contact" class="btn btn-primary">{{ t.nav.contact }}</a>
+    </div>
+
+    {% if next_article %}
+    <a href="{% url 'portfolio:article_detail' next_article.slug %}" class="next-project glass reveal">
+      <div>
+        <span class="project-cat">{{ t.articles.next }}</span>
+        <h2>{{ next_article.icon }} {% tf next_article 'title' %}</h2>
+      </div>
+      <span class="next-arrow">→</span>
+    </a>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

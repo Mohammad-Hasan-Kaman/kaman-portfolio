@@ -1,0 +1,75 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+<style>
+  .cards { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:0 0 20px; }
+  .card { background:#fff; border:1px solid #e0e0e0; border-radius:8px; padding:14px 16px; }
+  .card .num { font-size:26px; font-weight:700; color:#264b5d; }
+  .card .lbl { font-size:12px; color:#666; text-transform:uppercase; letter-spacing:.4px; }
+  .cols { display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:20px; }
+  table.mini { width:100%; border-collapse:collapse; background:#fff; border:1px solid #e0e0e0; border-radius:8px; overflow:hidden; }
+  table.mini th { background:#f6f7f8; text-align:left; padding:8px 10px; font-size:12px; }
+  table.mini td { padding:7px 10px; border-top:1px solid #eee; font-size:13px; }
+  .bar { background:#79aec8; height:14px; border-radius:3px; min-width:2px; display:inline-block; vertical-align:middle; }
+  h3.sec { margin:18px 0 8px; font-size:14px; }
+  @media (max-width:1100px){ .cards{grid-template-columns:repeat(2,1fr);} .cols{grid-template-columns:1fr;} }
+</style>
+
+<h2 style="margin:0 0 14px">📊 Site Analytics</h2>
+
+<div class="cards">
+  <div class="card"><div class="num">{{ cards.total }}</div><div class="lbl">Total events</div></div>
+  <div class="card"><div class="num">{{ cards.visitors }}</div><div class="lbl">Unique visitors</div></div>
+  <div class="card"><div class="num">{{ cards.today }}</div><div class="lbl">Today</div></div>
+  <div class="card"><div class="num">{{ cards.week }}</div><div class="lbl">Last 7 days</div></div>
+  <div class="card"><div class="num">{{ cards.month }}</div><div class="lbl">Last 30 days</div></div>
+  <div class="card"><div class="num">{{ cards.cv }}</div><div class="lbl">CV downloads</div></div>
+  <div class="card"><div class="num">{{ cards.contacts }}</div><div class="lbl">Contact form submissions</div></div>
+  <div class="card"><div class="num">{{ cards.mobile_pct }}%</div><div class="lbl">Mobile share</div></div>
+</div>
+
+<h3 class="sec">Last 14 days</h3>
+<table class="mini">
+  <tr><th>Date</th><th>Visits</th><th style="width:60%"></th></tr>
+  {% for d, n in daily %}
+  <tr><td>{{ d }}</td><td><strong>{{ n }}</strong></td>
+      <td><span class="bar" style="width:{% widthratio n max_daily 300 %}px"></span></td></tr>
+  {% endfor %}
+</table>
+
+<div class="cols" style="margin-top:20px">
+  <div>
+    <h3 class="sec">Popular pages</h3>
+    <table class="mini">
+      <tr><th>Page</th><th>Views</th></tr>
+      {% for row in popular %}<tr><td>{{ row.path }}</td><td>{{ row.n }}</td></tr>{% endfor %}
+    </table>
+  </div>
+  <div>
+    <h3 class="sec">Where visitors come from</h3>
+    <table class="mini">
+      <tr><th>Source</th><th>Events</th></tr>
+      {% for row in referrers %}<tr><td>{{ row.referrer }}</td><td>{{ row.n }}</td></tr>{% endfor %}
+    </table>
+  </div>
+  <div>
+    <h3 class="sec">Languages & devices</h3>
+    <table class="mini">
+      <tr><th>Lang</th><th>Events</th></tr>
+      {% for row in langs %}<tr><td>{{ row.lang }}</td><td>{{ row.n }}</td></tr>{% endfor %}
+    </table>
+    <table class="mini" style="margin-top:12px">
+      <tr><th>Device</th><th>Events</th></tr>
+      {% for row in devices %}<tr><td>{{ row.device }}</td><td>{{ row.n }}</td></tr>{% endfor %}
+    </table>
+  </div>
+</div>
+
+<h3 class="sec">Recent activity</h3>
+<table class="mini">
+  <tr><th>When</th><th>Event</th><th>Path</th><th>Lang</th><th>Device</th><th>From</th></tr>
+  {% for v in recent %}
+  <tr><td>{{ v.created_at|date:"m/d H:i" }}</td><td>{{ v.event }}</td><td>{{ v.path }}</td>
+      <td>{{ v.lang }}</td><td>{{ v.device }}</td><td>{{ v.referrer }}</td></tr>
+  {% endfor %}
+</table>
+{% endblock %}

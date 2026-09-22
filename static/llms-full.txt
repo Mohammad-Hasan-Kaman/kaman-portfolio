@@ -1,0 +1,555 @@
+# mhkaman.com — Full Content for LLMs
+
+> This is the machine-readable full-content version of https://mhkaman.com
+> (see llms.txt for the index). Content below is extracted from the live
+> English pages. Persian and Arabic versions exist at /fa/ and /ar/ with
+> identical structure.
+
+# PAGE: Home (https://mhkaman.com/en/)
+
+Mohammad Hasan Kaman — Full-Stack Developer (Remote)
+MHKaman
+.com
+Home
+About
+Skills
+Projects
+Articles
+Services
+Resume
+Contact
+EN
+English
+فارسی
+العربية
+Available for work
+Hi, I'm 👋
+Mohammad Hasan Kaman
+|
+I build end-to-end software — from TCP-level encrypted messengers to production Django platforms and AI-powered developer tools.
+View My Work
+Let's Talk
+0
+Years Building Software
+0
+Projects Delivered
+0
+Open-Source Repos
+🐍 Python
+🤖 AI / LLM
+🎸 Django
+🎯 C#
+🖥️ Desktop
+🔐 Secure
+🚀 REST APIs
+🐧 Linux
+4+
+Years Building Software
+Python
+Django
+C#
+.NET
+JavaScript
+REST APIs
+PyQt6
+CustomTkinter
+WinForms
+WebView2
+SQLite
+SQL
+LLMs
+OpenAI
+Gemini
+DeepSeek
+SSE Streaming
+Tool Calling
+TCP Sockets
+AES / Fernet
+bcrypt
+Git
+nginx
+gunicorn
+Linux
+Cloudflare Workers
+KV
+BIND9 DNS
+HTML5
+CSS3
+Python
+Django
+C#
+.NET
+JavaScript
+REST APIs
+PyQt6
+CustomTkinter
+WinForms
+WebView2
+SQLite
+SQL
+LLMs
+OpenAI
+Gemini
+DeepSeek
+SSE Streaming
+Tool Calling
+TCP Sockets
+AES / Fernet
+bcrypt
+Git
+nginx
+gunicorn
+Linux
+Cloudflare Workers
+KV
+BIND9 DNS
+HTML5
+CSS3
+Scroll
+About Me
+Turning complex problems into elegant software
+Mohammad Hasan Kaman
+Full-Stack Developer (Remote)
+📍 Based in Germany (Remote)
+🐍 Python
+🎯 C#
+🤖 AI / LLM
+🔐 Security
+I'm a freelance full-stack developer focused on AI applications, developer tooling and secure systems. I build end-to-end software in Python and C# — from TCP-level encrypted messengers to production Django platforms serving real users, to diagnostics for LLM streaming APIs. I care about shipping reliable, well-engineered products that solve real problems.
+I build end-to-end software — from TCP-level encrypted messengers to production Django platforms and AI-powered developer tools.
+Resume →
+⬇ Download CV
+GitHub →
+kaman.py
+class
+FullStackDeveloper
+:
+"""Python · C# · AI · Secure Systems"""
+def
+__init__
+(
+self
+):
+self
+.name =
+"Mohammad Hasan Kaman"
+self
+.stack = [
+"Django"
+,
+"PyQt6"
+,
+"LLMs"
+]
+self
+.passion =
+"shipping real products"
+def
+hire
+(
+self
+):
+return
+True
+# always 🚀
+My Arsenal
+Technologies I work with
+A battle-tested stack across backend, desktop, AI and infrastructure.
+🐍
+Python
+Advanced — shipped in projects
+🎸
+Django
+Advanced — shipped in projects
+🎯
+C#
+Advanced — shipped in projects
+⚡
+JavaScript
+Production experience
+🔗
+REST API Design
+Advanced — shipped in projects
+🤖
+LLM APIs (OpenAI / Gemini / DeepSeek)
+Advanced — shipped in projects
+📡
+SSE Streaming & Tool Calling
+Advanced — shipped in projects
+🖥️
+PyQt6 / CustomTkinter
+Advanced — shipped in projects
+🪟
+C# WinForms / Bunifu
+Advanced — shipped in projects
+🧭
+Edge WebView2 (Chromium)
+Production experience
+🔌
+TCP Socket Programming
+Advanced — shipped in projects
+🔐
+AES / Fernet Encryption
+Advanced — shipped in projects
+🔑
+bcrypt & Auth Systems
+Advanced — shipped in projects
+🛡️
+Rate Limiting & Hardening
+Production experience
+🗄️
+SQLite / SQL Databases
+Advanced — shipped in projects
+🚀
+nginx + gunicorn Deployment
+Advanced — shipped in projects
+🐧
+Linux VPS Administration
+Production experience
+🌐
+BIND9 DNS
+Working knowledge
+☁️
+Cloudflare Workers / KV
+Production experience
+🌱
+Git & GitHub
+Advanced — shipped in projects
+⚙️
+yt-dlp / Automation
+Production experience
+🎨
+HTML5 / CSS3
+Production experience
+🏛️
+OOP & Clean Architecture
+Advanced — shipped in projects
+🧵
+Multithreading & Concurrency
+Production experience
+Portfolio
+Featured projects
+Real products — live in production and on GitHub.
+All
+AI & Tools
+Web
+Security
+Desktop
+🩺
+AI & Tools
+Agent Stream Doctor
+A zero-dependency diagnostic toolkit that explains why an LLM stream returned nothing — reasoning-only responses, missing finish_reason, malformed SSE, truncated tool calls. Born from real-world debugging of LLM …
+Python
+SSE
+OpenAI API
+Streaming
+Case Study →
+Source Code
+📚
+AI & Tools
+Kaman AI Translator
+AI-powered desktop application that translates PDF and EPUB books from English to academic Persian using Google Gemini. Built with PyQt6 with a polished modern interface.
+Python
+PyQt6
+Google Gemini
+PDF
+Case Study →
+Source Code
+🔐
+Security
+Kaman Messenger
+A real-time encrypted messenger built completely from scratch: raw TCP sockets, AES (Fernet) encryption, bcrypt authentication, rate limiting and SQLite storage — with a CustomTkinter GUI.
+Python
+TCP Sockets
+AES/Fernet
+bcrypt
+Case Study →
+Source Code
+🌐
+● LIVE
+Web
+Dr-Kaman Site
+A multimedia archive website — audio, video, books and articles — running in production at drkaman.ir with Django, nginx and gunicorn on a Linux VPS.
+Django
+nginx
+gunicorn
+Linux VPS
+Case Study →
+Source Code
+🎓
+Web
+Planikaa Portal
+A comprehensive educational platform with an exam-analytics dashboard, blog and student resources — built with Django.
+Django
+PostgreSQL
+Chart.js
+HTML/CSS
+Case Study →
+Source Code
+More Projects
+💬
+Kaman AI Chat
+A C# desktop chat assistant running DeepSeek models via OpenModel API, with Google Cloud …
+C#
+DeepSeek
+OpenModel API
+🧭
+Kaman Web Browser
+A lightweight multi-tab Windows web browser built on Microsoft Edge WebView2 (Chromium) with C#.
+C#
+.NET
+WebView2
+🕌
+Quran Group Bot
+Serverless bot for weekly Quran juz reading groups on Bale Messenger — Cloudflare Workers …
+Bale Messenger
+Cloudflare Workers
+KV
+⬇️
+YouTube Downloader
+Professional YouTube downloader with a modern Persian RTL interface, live progress and quality selection. …
+Python
+CustomTkinter
+yt-dlp
+Articles
+Articles & writing
+Technical notes, lessons learned and ideas from my projects.
+🩺
+📅 28 Aug 2026
+Why is my LLM stream empty? A field guide to broken SSE responses
+Reasoning-only replies, missing finish_reason, malformed SSE frames — the four most common reasons a streaming LLM call returns nothing, and how to diagnose each one.
+Read Article →
+What I Do
+Services I offer
+From idea to production — I ship complete, secure and scalable software.
+🌐
+Web Development
+Production-grade Django platforms with REST APIs, analytics dashboards and clean architecture.
+🤖
+AI Engineering
+LLM-powered apps: chat assistants, streaming diagnostics, tool calling and AI integrations.
+🖥️
+Desktop Applications
+Cross-platform desktop tools with PyQt6, CustomTkinter and C# WinForms.
+🔐
+Secure Systems
+Encrypted communication, hard authentication and rate-limited networking from scratch.
+Testimonials
+What clients say
+Feedback from people I have worked with.
+❝
+Hasan delivered our production website end-to-end — Django, nginx and gunicorn on our own VPS. Fast, reliable and always reachable.
+D
+Dr. Mohammad Reza Kaman
+Site Owner, drkaman.ir
+❝
+agent-stream-doctor solved a streaming bug that had cost me hours. Clean code, zero dependencies, spot-on documentation.
+O
+Open-Source Collaborator
+GitHub
+Contact
+Let's build something great
+Have a project in mind? Send me a message and I will get back to you within 24 hours.
+📧
+Email
+mohammadhasankaman@gmail.com
+✈️
+Telegram
+@mohaka0975
+💼
+LinkedIn
+in/kaman-programmer
+🐙
+GitHub
+@Mohammad-Hasan-Kaman
+Website
+Send Message 🚀
+MHKaman
+.com
+I build end-to-end software — from TCP-level encrypted messengers to production Django platforms and AI-powered developer tools.
+Quick Links
+About
+Projects
+Articles
+Services
+Resume
+Contact
+Connect with me
+© 2026 Mohammad Hasan Kaman — All rights reserved. ·
+mhkaman.com
+
+# PAGE: CV (https://mhkaman.com/en/cv/)
+
+Resume — Mohammad Hasan Kaman
+MHKaman
+.com
+Home
+About
+Skills
+Projects
+Articles
+Services
+Resume
+Contact
+EN
+English
+فارسی
+العربية
+Mohammad Hasan Kaman
+Full-Stack Developer (Remote)
+📍 Based in Germany (Remote) · 📧 mohammadhasankaman@gmail.com
+⬇ Download CV (PDF)
+Contact
+Summary
+Self-taught Full-Stack Developer with strong foundations in Python, C# and JavaScript, and 3+ years of hands-on experience shipping production-ready software — from AI-powered desktop applications and LLM integrations to Django platforms deployed on Linux VPS with nginx and gunicorn. Passionate about solving algorithmic and system-level problems and building database-driven platforms. Currently completing secondary education (expected graduation mid-2028) while freelancing for international clients. Seeking remote backend or full-stack roles in collaborative teams.
+Core Competencies
+Backend Development & Automation
+API Integration & Management
+Database Design & Architecture
+AI Application Development
+Web Application Architecture
+Network Infrastructure & Troubleshooting
+Professional Projects
+AI-Powered PDF Translation & Automation Platform
+2024 — 2026
+Freelance
+Commercial Python desktop application that translates academic and technical PDF/Epub documents over 500 pages into Farsi using the Gemini API. Includes multi-language support (20+ languages), advanced API key management and automated licensing verification.
+Agent Stream Doctor — LLM Streaming Diagnostics
+2025 — 2026
+Open Source
+Zero-dependency Python toolkit that diagnoses why an LLM stream returns nothing: reasoning-only responses, missing finish_reason, malformed SSE framing and truncated tool calls. Built from real-world debugging of LLM router integrations.
+Custom Counseling Center AI Bot
+2024
+Freelance
+Designed and integrated an intelligent automated assistant for a counseling center using modern LLM APIs to handle client queries and automate interaction workflows, measurably reducing human-agent workload.
+Educational Website & CMS (Django)
+2023 — 2024
+Client Project
+Django-based CMS platform with secure user authentication, PostgreSQL integration, multi-format media management (video/audio playback) and dynamic categorized content delivery.
+Exam Analysis & Statistics System
+2023
+Client Project
+Data-focused web application that ingests student test scores, calculates statistical variances and standard deviations, and exports PDF reports with visual analytics for performance evaluation.
+KamanBrowser
+2022 — 2023
+Personal Project
+Modern desktop web browser built with C# and Windows Forms. Implemented tab management, bookmark support, custom UI components and smooth navigation controls to ensure minimal memory footprint and light resource allocation.
+Technical Skills
+🐍 Python
+Advanced — shipped in projects
+🎸 Django
+Advanced — shipped in projects
+🎯 C#
+Advanced — shipped in projects
+⚡ JavaScript
+Production experience
+🔗 REST API Design
+Advanced — shipped in projects
+🤖 LLM APIs (OpenAI / Gemini / DeepSeek)
+Advanced — shipped in projects
+📡 SSE Streaming & Tool Calling
+Advanced — shipped in projects
+🖥️ PyQt6 / CustomTkinter
+Advanced — shipped in projects
+🪟 C# WinForms / Bunifu
+Advanced — shipped in projects
+🧭 Edge WebView2 (Chromium)
+Production experience
+🔌 TCP Socket Programming
+Advanced — shipped in projects
+🔐 AES / Fernet Encryption
+Advanced — shipped in projects
+🔑 bcrypt & Auth Systems
+Advanced — shipped in projects
+🛡️ Rate Limiting & Hardening
+Production experience
+🗄️ SQLite / SQL Databases
+Advanced — shipped in projects
+🚀 nginx + gunicorn Deployment
+Advanced — shipped in projects
+🐧 Linux VPS Administration
+Production experience
+🌐 BIND9 DNS
+Working knowledge
+☁️ Cloudflare Workers / KV
+Production experience
+🌱 Git & GitHub
+Advanced — shipped in projects
+⚙️ yt-dlp / Automation
+Production experience
+🎨 HTML5 / CSS3
+Production experience
+🏛️ OOP & Clean Architecture
+Advanced — shipped in projects
+🧵 Multithreading & Concurrency
+Production experience
+Selected Projects
+🩺
+Agent Stream Doctor
+Python, SSE, OpenAI API, Streaming, LLM
+📚
+Kaman AI Translator
+Python, PyQt6, Google Gemini, PDF, EPUB
+🔐
+Kaman Messenger
+Python, TCP Sockets, AES/Fernet, bcrypt, SQLite, CustomTkinter
+🌐
+Dr-Kaman Site
+Django, nginx, gunicorn, Linux VPS, JavaScript
+🎓
+Planikaa Portal
+Django, PostgreSQL, Chart.js, HTML/CSS
+💬
+Kaman AI Chat
+C#, DeepSeek, OpenModel API, Google Cloud TTS, Bunifu UI
+Education
+Secondary Education (High School)
+Expected Graduation: Mid-2028
+Data Structures & Algorithms
+Machine Learning Fundamentals (freeCodeCamp Track)
+Advanced Mathematics, Logic and Statistics
+Networking Concepts (Network+ Preparation)
+Languages
+🗣️
+Persian (Farsi)
+Native
+🗣️
+Arabic
+Fluent — strong communication
+🗣️
+English
+Upper-Intermediate
+Contact Information
+📧
+Email
+mohammadhasankaman@gmail.com
+✈️
+Telegram
+@mohaka0975
+💼
+LinkedIn
+in/kaman-programmer
+🐙
+GitHub
+@Mohammad-Hasan-Kaman
+✖️
+X (Twitter)
+@kaman_hasan0975
+← Home
+MHKaman
+.com
+I build end-to-end software — from TCP-level encrypted messengers to production Django platforms and AI-powered developer tools.
+Quick Links
+About
+Projects
+Articles
+Services
+Resume
+Contact
+Connect with me
+© 2026 Mohammad Hasan Kaman — All rights reserved. ·
+mhkaman.com
+
+---
+
+Last updated: 2026-09-02 (evening). Owner: Mohammad Hasan Kaman (mohammadhasankaman@gmail.com).

@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static portfolio_extras %}
+
+{% block title %}{{ t.cv.title }} — {% tf profile 'name' %}{% endblock %}
+
+{% block content %}
+<section class="section cv-page">
+  <div class="container cv-container">
+
+    <!-- Header card -->
+    <div class="cv-head glass reveal">
+      <div class="cv-avatar">
+        {% if profile.avatar %}<img src="{{ profile.avatar.url }}" alt="{% tf profile 'name' %}">{% else %}
+        <div class="avatar-fallback">👨‍💻</div>{% endif %}
+      </div>
+      <div class="cv-head-info">
+        <h1>{% tf profile 'name' %}</h1>
+        <p class="about-role accent">{% tf profile 'role' %}</p>
+        <p class="about-loc">📍 {{ t.misc.location }} {% tf profile 'location' %} · 📧 {{ profile.email }}</p>
+        <div class="cv-head-actions">
+          <a href="{% url 'portfolio:cv_download' %}?lang={{ LANG }}" class="btn btn-primary" download>⬇ {{ t.cv.download }}</a>
+          <a href="{% url 'portfolio:home' %}#contact" class="btn btn-ghost">{{ t.nav.contact }}</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary -->
+        <div class="cv-section glass reveal">
+          <h2>{{ t.cv.about }}</h2>
+          <p>{% tf profile 'summary' %}</p>
+        </div>
+
+        <!-- Core Competencies -->
+        {% tf profile 'core_competencies' as core_comp %}
+        {% if core_comp %}
+        <div class="cv-section glass reveal">
+          <h2>{{ t.cv.core_competencies }}</h2>
+          <ul class="cv-core-competencies">
+            {% for line in core_comp|split_lines %}
+            <li>{{ line }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
+        <!-- Professional projects / experience -->
+    <div class="cv-section glass reveal">
+      <h2>{{ t.cv.experience }}</h2>
+      <div class="cv-experience">
+        {% for exp in experiences %}
+        <div class="cv-exp-item">
+          <div class="cv-exp-head">
+            <h3>{% tf exp 'title' %}</h3>
+            {% if exp.period_en or exp.period_fa or exp.period_ar %}<span class="cv-exp-period">{% tf exp 'period' %}</span>{% endif %}
+          </div>
+          {% if exp.org_en or exp.org_fa or exp.org_ar %}<p class="cv-exp-org">{% tf exp 'org' %}</p>{% endif %}
+          <p>{% tf exp 'description' %}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="cv-section glass reveal">
+      <h2>{{ t.cv.skills }}</h2>
+      <div class="cv-skills">
+        {% for skill in skills %}
+        <div class="cv-skill">
+          <span class="cv-skill-name">{{ skill.icon }} {{ skill.name }}</span>
+          <span class="cv-skill-tier">{% skill_label skill %}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="cv-section glass reveal">
+      <h2>{{ t.cv.projects }}</h2>
+      <ul class="cv-projects">
+        {% for project in projects %}
+        <li>
+          <span class="mini-icon">{{ project.icon }}</span>
+          <div>
+            <strong>{% tf project 'title' %}</strong>
+            <span class="cv-proj-tech">{{ project.tech_stack }}</span>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <!-- Education -->
+    <div class="cv-section glass reveal">
+      <h2>{{ t.cv.education }}</h2>
+      <div class="cv-experience">
+        {% for edu in educations %}
+        <div class="cv-exp-item">
+          <div class="cv-exp-head">
+            <h3>{% tf edu 'degree' %}</h3>
+            {% if edu.period_en or edu.period_fa or edu.period_ar %}<span class="cv-exp-period">{% tf edu 'period' %}</span>{% endif %}
+          </div>
+          {% if edu.institution_en or edu.institution_fa or edu.institution_ar %}<p class="cv-exp-org">{% tf edu 'institution' %}</p>{% endif %}
+          {% tf edu 'details' as edu_details %}
+          {% if edu_details %}
+          <ul class="cv-details">
+            {% for line in edu_details|split_lines %}<li>{{ line }}</li>{% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="cv-section glass reveal">
+      <h2>{{ t.cv.languages }}</h2>
+      <div class="cv-langs">
+        {% for lang in cv_languages %}
+        <div class="cv-lang">
+          <span class="cv-lang-icon">🗣️</span>
+          <div><strong>{% tf lang 'name' %}</strong><span>{% tf lang 'level' %}</span></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="cv-section glass reveal">
+      <h2>{{ t.cv.contact }}</h2>
+      <div class="cv-contact-grid">
+        <a class="contact-row" href="mailto:{{ profile.email }}"><span class="contact-icon">📧</span><div><strong>Email</strong><span>{{ profile.email }}</span></div></a>
+        <a class="contact-row" href="{{ profile.telegram }}" target="_blank" rel="noopener"><span class="contact-icon">✈️</span><div><strong>Telegram</strong><span>@mohaka0975</span></div></a>
+        <a class="contact-row" href="{{ profile.linkedin }}" target="_blank" rel="noopener"><span class="contact-icon">💼</span><div><strong>LinkedIn</strong><span>in/kaman-programmer</span></div></a>
+        <a class="contact-row" href="{{ profile.github }}" target="_blank" rel="noopener"><span class="contact-icon">🐙</span><div><strong>GitHub</strong><span>@Mohammad-Hasan-Kaman</span></div></a>
+        <a class="contact-row" href="{{ profile.twitter }}" target="_blank" rel="noopener"><span class="contact-icon">✖️</span><div><strong>X (Twitter)</strong><span>@kaman_hasan0975</span></div></a>
+      </div>
+    </div>
+
+    <a href="{% url 'portfolio:home' %}" class="back-link reveal">← {{ t.nav.home }}</a>
+  </div>
+</section>
+{% endblock %}

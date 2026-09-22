@@ -1,0 +1,75 @@
+# mhkaman.com — Mohammad Hasan Kaman, Full-Stack Developer
+# Search engines: crawl everything
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+# ---- AI crawlers: explicitly WELCOME ----
+User-agent: GPTBot
+Allow: /
+Disallow: /admin/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /admin/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /admin/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /admin/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /admin/
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /admin/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /admin/
+
+User-agent: meta-externalagent
+Allow: /
+Disallow: /admin/
+
+User-agent: YouBot
+Allow: /
+Disallow: /admin/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /admin/
+
+User-agent: Diffbot
+Allow: /
+Disallow: /admin/
+
+# LLM guidance file
+# llms.txt spec: https://llmstxt.org
+Sitemap: https://mhkaman.com/sitemap.xml
+LLM-Full: https://mhkaman.com/llms-full.txt

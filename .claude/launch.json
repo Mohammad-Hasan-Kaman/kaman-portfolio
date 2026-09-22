@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio",
+      "url": "http://127.0.0.1:8765",
+      "runtimeExecutable": "D:\\install python\\python.exe",
+      "runtimeArgs": ["manage.py", "runserver", "127.0.0.1:8765", "--noreload"],
+      "cwd": "C:\\Users\\Nik\\kaman-portfolio",
+      "port": 8765
+    }
+  ]
+}

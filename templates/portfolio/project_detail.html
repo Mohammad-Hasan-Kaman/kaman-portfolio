@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static portfolio_extras %}
+
+{% block title %}{% tf project 'title' %} — {% tf profile 'name' %}{% endblock %}
+
+{% block content %}
+<section class="section project-detail">
+  <div class="container">
+    <a href="{% url 'portfolio:home' %}#projects" class="back-link reveal">← {{ t.projects.back }}</a>
+
+    <div class="detail-hero reveal">
+      <div class="project-cover detail-cover cat-{{ project.category }}">
+        {% if project.image %}<img src="{{ project.image.url }}" alt="{% tf project 'title' %}">{% else %}
+        <span class="cover-icon big">{{ project.icon }}</span>{% endif %}
+        {% if project.live_url %}<span class="live-pill">● LIVE</span>{% endif %}
+      </div>
+      <div class="detail-info">
+        <span class="project-cat">{% category_name project.category t %}</span>
+        <h1 class="detail-title">{% tf project 'title' %}</h1>
+        <p class="detail-desc">{% tf project 'description' %}</p>
+
+        <div class="detail-tech">
+          <h2>{{ t.projects.tech }}</h2>
+          <div class="project-tech">
+            {% for tech in project.tech_stack|techs %}<span>{{ tech }}</span>{% endfor %}
+          </div>
+        </div>
+
+        <div class="detail-actions">
+          {% if project.live_url %}<a href="{{ project.live_url }}" target="_blank" rel="noopener" class="btn btn-primary">{{ t.projects.live }} ↗</a>{% endif %}
+          {% if project.repo_url %}<a href="{{ project.repo_url }}" target="_blank" rel="noopener" class="btn btn-ghost">{{ t.projects.code }} ⭐</a>{% endif %}
+          <a href="{% url 'portfolio:home' %}#contact" class="btn btn-ghost">{{ t.nav.contact }}</a>
+        </div>
+      </div>
+    </div>
+
+    {% if next_project %}
+    <a href="{% url 'portfolio:project_detail' next_project.slug %}" class="next-project glass reveal">
+      <div>
+        <span class="project-cat">{{ t.projects.next }}</span>
+        <h2>{{ next_project.icon }} {% tf next_project 'title' %}</h2>
+      </div>
+      <span class="next-arrow">→</span>
+    </a>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

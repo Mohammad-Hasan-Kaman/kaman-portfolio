@@ -1,0 +1,36 @@
+# Mohammad Hasan Kaman — Full-Stack Developer
+
+> Trilingual (EN/FA/AR) portfolio of Mohammad Hasan Kaman: full-stack developer building AI applications, developer tooling, and secure systems in Python and C#. Site includes live project case studies, a downloadable CV in three languages, and technical articles. Open to full-stack / Python / Django opportunities — remote or relocation.
+
+Contact: contact form at https://mhkaman.com/en/#contact · Email: mohammadhasankaman@gmail.com · Location: Iran
+
+## Pages
+
+- [Home (English)](https://mhkaman.com/en/): Overview, skills, featured projects, services, testimonials, contact form
+- [Home (Persian)](https://mhkaman.com/fa/): نسخهٔ فارسی
+- [Home (Arabic)](https://mhkaman.com/ar/): النسخة العربية
+- [CV / Résumé (English)](https://mhkaman.com/en/cv/): Complete résumé, printable, with PDF download in all three languages
+- [CV (Persian)](https://mhkaman.com/fa/cv/): رزومهٔ کامل فارسی
+- [CV (Arabic)](https://mhkaman.com/ar/cv/): السيرة الذاتية الكاملة
+
+## Featured Projects
+
+- [Agent Stream Doctor](https://mhkaman.com/en/projects/agent-stream-doctor/): Open-source Python toolkit diagnosing broken LLM streams: empty responses, reasoning-only replies, missing finish_reason, malformed SSE, truncated tool calls. Zero dependencies. [Source](https://github.com/Mohammad-Hasan-Kaman/agent-stream-doctor)
+- [Kaman AI Translator](https://mhkaman.com/en/projects/kaman-ai-translator/): Desktop app translating PDF & EPUB books from English to academic Persian using Google Gemini. PyQt6.
+- [Kaman Messenger](https://mhkaman.com/en/projects/kaman-messenger/): Real-time encrypted desktop messenger in pure Python: TCP sockets, AES (Fernet), bcrypt, rate limiting, SQLite. CustomTkinter GUI.
+- [Dr-Kaman Site](https://mhkaman.com/en/projects/dr-kaman-site/): Production multimedia archive (audio, video, books, articles) serving drkaman.ir. Django + nginx + gunicorn.
+- [Planikaa Portal](https://mhkaman.com/en/projects/planikaa-portal/): Django educational platform with exam analytics dashboard, blog, and student resources.
+
+## Articles
+
+- [Why is my LLM stream empty? A field guide to broken SSE responses](https://mhkaman.com/en/articles/why-is-my-llm-stream-empty/): Practical guide to diagnosing empty LLM responses, reasoning-only streams, and missing finish_reason in OpenAI-compatible APIs.
+
+## Key Facts
+
+- Languages: English (fluent, professional), Persian (native), Arabic (working)
+- Core stack: Python, Django, C# (.NET WinForms), JavaScript, PyQt6, CustomTkinter
+- AI engineering: OpenAI-compatible APIs, Gemini, DeepSeek, SSE streaming, tool calling
+- Infrastructure: nginx, gunicorn, systemd, BIND9 DNS (own nameservers), Let's Encrypt, Cloudflare Workers
+- Databases: SQLite, familiar with PostgreSQL
+- Expected graduation (high school): mid-2028
+- Profiles: [GitHub](https://github.com/Mohammad-Hasan-Kaman) · [X/Twitter](https://x.com/kaman_hasan0975) · [LinkedIn](https://www.linkedin.com/in/kaman-programmer) · [Telegram](https://t.me/mohaka0975)

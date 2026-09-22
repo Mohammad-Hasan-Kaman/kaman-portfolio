@@ -1,0 +1,328 @@
+{% extends 'base.html' %}
+{% load static portfolio_extras %}
+
+{% block content %}
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge reveal">
+        <span class="pulse-dot"></span> {{ t.hero.available }}
+      </div>
+      <p class="hero-greeting reveal">{{ t.hero.greeting }} 👋</p>
+      <h1 class="hero-name reveal">{% tf profile 'name' %}</h1>
+      <p class="hero-typing reveal" aria-live="off">
+        <span id="typing" data-roles="{{ t.hero.roles|join:'|' }}"></span><span class="cursor">|</span>
+      </p>
+      <p class="hero-tagline reveal">{{ t.hero.tagline }}</p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">{{ t.hero.cta_projects }}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">{{ t.hero.cta_contact }}</a>
+      </div>
+
+      <!-- Animated stats -->
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num" data-count="{{ profile.years_experience }}">0</span>
+          <span class="stat-label">{{ t.stats.years }}</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="{{ profile.projects_completed }}">0</span>
+          <span class="stat-label">{{ t.stats.projects }}</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="10">0</span>
+          <span class="stat-label">{{ t.stats.repos }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="hero-photo-wrap tilt">
+        <div class="hero-photo-ring"></div>
+        {% if profile.avatar %}<img class="hero-photo" src="{{ profile.avatar.url }}" alt="{% tf profile 'name' %}">
+        {% else %}<div class="hero-photo hero-photo-fallback">👨‍💻</div>{% endif %}
+        <div class="floating-chip chip-1">🐍 Python</div>
+        <div class="floating-chip chip-2">🤖 AI / LLM</div>
+        <div class="floating-chip chip-3">🎸 Django</div>
+        <div class="floating-chip chip-4">🎯 C#</div>
+        <div class="floating-chip chip-5">🖥️ Desktop</div>
+        <div class="floating-chip chip-6">🔐 Secure</div>
+        <div class="floating-chip chip-7">🚀 REST APIs</div>
+        <div class="floating-chip chip-8">🐧 Linux</div>
+        <div class="exp-badge"><strong>{{ profile.years_experience }}+</strong> {{ t.stats.years }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tech tag marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      {% for tag in marquee_tags %}<span class="marquee-tag">{{ tag }}</span>{% endfor %}
+      {% for tag in marquee_tags %}<span class="marquee-tag">{{ tag }}</span>{% endfor %}
+    </div>
+  </div>
+  <a href="#about" class="scroll-hint"><span></span>{{ t.misc.scroll }}</a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">{{ t.about.label }}</span>
+      <h2 class="section-title">{{ t.about.title }}</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-card glass reveal">
+        <div class="about-avatar">
+          {% if profile.avatar %}<img src="{{ profile.avatar.url }}" alt="{% tf profile 'name' %}">{% else %}
+          <div class="avatar-fallback">👨‍💻</div>{% endif %}
+        </div>
+        <h3>{% tf profile 'name' %}</h3>
+        <p class="about-role accent">{% tf profile 'role' %}</p>
+        <p class="about-loc">📍 {{ t.misc.location }} {% tf profile 'location' %}</p>
+        <div class="about-badges">
+          <span class="badge">🐍 Python</span>
+          <span class="badge">🎯 C#</span>
+          <span class="badge">🤖 AI / LLM</span>
+          <span class="badge">🔐 Security</span>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <p>{% tf profile 'about' %}</p>
+        <p>{% tf profile 'tagline' %}</p>
+        <div class="about-actions">
+          <a href="{% url 'portfolio:cv' %}" class="btn btn-primary">{{ t.nav.cv }} →</a>
+          <a href="{% url 'portfolio:cv_download' %}?lang={{ LANG }}" class="btn btn-ghost" download>⬇ {{ t.about.download_cv }}</a>
+          <a href="{{ profile.github }}" target="_blank" rel="noopener" class="btn btn-ghost">GitHub →</a>
+        </div>
+
+        <div class="code-window about-code tilt">
+          <div class="code-titlebar">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="code-filename">kaman.py</span>
+          </div>
+          <pre class="code-body"><code><span class="c-kw">class</span> <span class="c-cls">FullStackDeveloper</span>:
+    <span class="c-str">"""Python · C# · AI · Secure Systems"""</span>
+
+    <span class="c-kw">def</span> <span class="c-fn">__init__</span>(<span class="c-self">self</span>):
+        <span class="c-self">self</span>.name = <span class="c-str">"Mohammad Hasan Kaman"</span>
+        <span class="c-self">self</span>.stack = [<span class="c-str">"Django"</span>, <span class="c-str">"PyQt6"</span>, <span class="c-str">"LLMs"</span>]
+        <span class="c-self">self</span>.passion = <span class="c-str">"shipping real products"</span>
+
+    <span class="c-kw">def</span> <span class="c-fn">hire</span>(<span class="c-self">self</span>):
+        <span class="c-kw">return</span> <span class="c-bool">True</span>  <span class="c-cmt"># always 🚀</span></code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section section-alt" id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">{{ t.skills.label }}</span>
+      <h2 class="section-title">{{ t.skills.title }}</h2>
+      <p class="section-sub">{{ t.skills.subtitle }}</p>
+    </div>
+    <div class="skills-grid">
+      {% for skill in skills %}
+      <div class="skill-card glass reveal" style="--d: {{ forloop.counter0 }}00ms">
+        <div class="skill-head">
+          <span class="skill-icon">{{ skill.icon }}</span>
+          <span class="skill-name">{{ skill.name }}</span>
+        </div>
+        <span class="skill-tier">{% skill_label skill %}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">{{ t.projects.label }}</span>
+      <h2 class="section-title">{{ t.projects.title }}</h2>
+      <p class="section-sub">{{ t.projects.subtitle }}</p>
+    </div>
+
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">{{ t.projects.all }}</button>
+      <button class="filter-btn" data-filter="ai">{{ t.projects.ai }}</button>
+      <button class="filter-btn" data-filter="web">{{ t.projects.web }}</button>
+      <button class="filter-btn" data-filter="security">{{ t.projects.security }}</button>
+      <button class="filter-btn" data-filter="desktop">{{ t.projects.desktop }}</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+      {% for project in featured_projects %}
+      <article class="project-card glass reveal {% if forloop.counter0 == 0 %}span-2{% endif %}" data-category="{{ project.category }}">
+        <a href="{% url 'portfolio:project_detail' project.slug %}" class="project-cover cat-{{ project.category }}" aria-label="{% tf project 'title' %} — {{ t.projects.details }}">
+          {% if project.image %}<img src="{{ project.image.url }}" alt="{% tf project 'title' %}">{% else %}
+          <span class="cover-icon">{{ project.icon }}</span>{% endif %}
+          {% if project.live_url %}<span class="live-pill">● LIVE</span>{% endif %}
+        </a>
+        <div class="project-body">
+          <span class="project-cat">{% category_name project.category t %}</span>
+          <h3 class="project-title">{% tf project 'title' %}</h3>
+          <p class="project-desc">{{ project.description_en|truncatewords:28 }}</p>
+          <div class="project-tech">
+            {% for tech in project.tech_stack|techs|slice:":4" %}<span>{{ tech }}</span>{% endfor %}
+          </div>
+          <div class="project-links">
+            <a href="{% url 'portfolio:project_detail' project.slug %}" class="link-btn" aria-label="{% tf project 'title' %} — {{ t.projects.details }}">{{ t.projects.details }} →</a>
+            {% if project.repo_url %}<a href="{{ project.repo_url }}" target="_blank" rel="noopener" class="link-btn" aria-label="{% tf project 'title' %} — {{ t.projects.code }}">{{ t.projects.code }}</a>{% endif %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    {% if other_projects %}
+    <h3 class="subsection-title reveal">{{ t.projects.other }}</h3>
+    <div class="mini-projects">
+      {% for project in other_projects %}
+      <a href="{% url 'portfolio:project_detail' project.slug %}" class="mini-card glass reveal" data-category="{{ project.category }}">
+        <span class="mini-icon">{{ project.icon }}</span>
+        <div>
+          <h4>{% tf project 'title' %}</h4>
+          <p>{{ project.description_en|truncatewords:14 }}</p>
+          <div class="project-tech">
+            {% for tech in project.tech_stack|techs|slice:":3" %}<span>{{ tech }}</span>{% endfor %}
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- ============ ARTICLES ============ -->
+{% if articles %}
+<section class="section section-alt" id="articles">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">{{ t.articles.label }}</span>
+      <h2 class="section-title">{{ t.articles.title }}</h2>
+      <p class="section-sub">{{ t.articles.subtitle }}</p>
+    </div>
+    <div class="articles-grid">
+      {% for article in articles %}
+      <article class="article-card glass reveal" style="--d: {{ forloop.counter0 }}00ms">
+        <a href="{% url 'portfolio:article_detail' article.slug %}" class="article-cover" aria-hidden="true" tabindex="-1">
+          {% if article.cover %}<img src="{{ article.cover.url }}" alt="{% tf article 'title' %}">{% else %}
+          <span class="cover-icon">{{ article.icon }}</span>{% endif %}
+        </a>
+        <div class="article-body">
+          <span class="article-date">📅 {% if LANG == 'fa' %}{{ article.created_at|date:"Y/m/d" }}{% else %}{{ article.created_at|date:"d M Y" }}{% endif %}</span>
+          <h3 class="project-title">{% tf article 'title' %}</h3>
+          <p class="project-desc">{% tf article 'excerpt' %}</p>
+          <a href="{% url 'portfolio:article_detail' article.slug %}" class="link-btn" aria-label="{% tf article 'title' %} — {{ t.articles.read_more }}">{{ t.articles.read_more }} →</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ============ CONTACT ============ -->
+
+<!-- ============ SERVICES ============ -->
+<section class="section section-alt" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">{{ t.services.label }}</span>
+      <h2 class="section-title">{{ t.services.title }}</h2>
+      <p class="section-sub">{{ t.services.subtitle }}</p>
+    </div>
+    <div class="services-grid">
+      {% for service in services %}
+      <div class="service-card glass reveal" style="--d: {{ forloop.counter0 }}00ms">
+        <div class="service-icon">{{ service.icon }}</div>
+        <h3>{% tf service 'title' %}</h3>
+        <p>{% tf service 'description' %}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+{% if testimonials %}
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">{{ t.testimonials.label }}</span>
+      <h2 class="section-title">{{ t.testimonials.title }}</h2>
+      <p class="section-sub">{{ t.testimonials.subtitle }}</p>
+    </div>
+    <div class="testimonials-grid">
+      {% for item in testimonials %}
+      <blockquote class="testimonial-card glass reveal">
+        <div class="quote-mark">❝</div>
+        <p>{% tf item 'text' %}</p>
+        <footer>
+          <div class="t-avatar">{{ item.name|slice:":1" }}</div>
+          <div><strong>{{ item.name }}</strong><span>{% tf item 'role' %}</span></div>
+        </footer>
+      </blockquote>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">{{ t.contact.label }}</span>
+      <h2 class="section-title">{{ t.contact.title }}</h2>
+      <p class="section-sub">{{ t.contact.subtitle }}</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <a class="contact-row glass" href="mailto:{{ profile.email }}">
+          <span class="contact-icon">📧</span>
+          <div><strong>Email</strong><span>{{ profile.email }}</span></div>
+        </a>
+        <a class="contact-row glass" href="{{ profile.telegram }}" target="_blank" rel="noopener">
+          <span class="contact-icon">✈️</span>
+          <div><strong>Telegram</strong><span>@mohaka0975</span></div>
+        </a>
+        <a class="contact-row glass" href="{{ profile.linkedin }}" target="_blank" rel="noopener">
+          <span class="contact-icon">💼</span>
+          <div><strong>LinkedIn</strong><span>in/kaman-programmer</span></div>
+        </a>
+        <a class="contact-row glass" href="{{ profile.github }}" target="_blank" rel="noopener">
+          <span class="contact-icon">🐙</span>
+          <div><strong>GitHub</strong><span>@Mohammad-Hasan-Kaman</span></div>
+        </a>
+      </div>
+
+      <form class="contact-form glass reveal" id="contactForm" method="post" action="{% url 'portfolio:contact_submit' %}" data-sending="{{ t.contact.sending }}">
+        {% csrf_token %}
+        <div style="position:absolute;width:0;height:0;overflow:hidden;clip-path:inset(50%)" aria-hidden="true">
+          <label for="hp_website">Website</label>
+          <input type="text" name="website" id="hp_website" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form-row">
+          <input type="text" name="name" placeholder="{{ t.contact.name }}" required>
+          <input type="email" name="email" placeholder="{{ t.contact.email }}" required>
+        </div>
+        <input type="text" name="subject" placeholder="{{ t.contact.subject }}" required>
+        <textarea name="message" rows="5" placeholder="{{ t.contact.message }}" required></textarea>
+        <button type="submit" class="btn btn-primary btn-full" id="sendBtn">{{ t.contact.send }} 🚀</button>
+        <p class="form-msg" id="formMsg"></p>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}
