@@ -167,4 +167,4 @@ If you find this project useful, please give it a **⭐ star**!
 
 ---
 
-*Maintained by Mohammad Hasan Kaman · Live at [mhkaman.com](https://mhkaman.com) · Last updated: September 2026*
+*Maintained by Mohammad Hasan Kaman · Live at [mhkaman.com](https://mhkaman.com) · Last updated: October 2026*
