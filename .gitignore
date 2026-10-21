@@ -4,3 +4,6 @@ db.sqlite3
 media/
 staticfiles/
 .env
+
+# Local IDE / agent launch config (machine-specific)
+.claude/
