@@ -1,6 +1,6 @@
 # 🌍 Kaman Portfolio — mhkaman.com
 
-> Trilingual personal portfolio (English / فارسی / العربية) for **Mohammad Hasan Kaman**, built with Django 5. Everything on the site — profile, projects, skills, services, testimonials, articles, even UI strings — is editable from the Django admin. Deployed live at **[mhkaman.com](https://mhkaman.com)**.
+> Trilingual personal portfolio (English / Persian / Arabic) for **Mohammad Hasan Kaman**, built with Django 5. Everything on the site — profile, projects, skills, services, testimonials, articles, even UI strings — is editable from the Django admin. Deployed live at **[mhkaman.com](https://mhkaman.com)**.
 
 [![Django](https://img.shields.io/badge/Django-5+-green.svg?logo=django&logoColor=white)](https://django.com)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg?logo=python&logoColor=white)](https://python.org)
@@ -39,7 +39,7 @@
 
 ### For visitors
 
-**🌐 [https://mhkaman.com](https://mhkaman.com)** — pick EN / فا / ع from the navbar.
+**🌐 [https://mhkaman.com](https://mhkaman.com)** — pick a language from the navbar.
 
 ### For developers (local)
 
