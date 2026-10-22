@@ -58,7 +58,7 @@ pip install -r requirements.txt
 
 # Database + demo content
 python manage.py migrate
-python manage.py seed_data        # profile, 9 projects, skills, services, testimonials
+python manage.py seed_data        # profile, 12 projects, skills, services, testimonials
 python manage.py seed_site_text   # UI strings + marquee tags (idempotent)
 
 # Your own admin account
@@ -108,7 +108,7 @@ DJANGO_SETTINGS_MODULE=kaman_portfolio.settings_prod gunicorn kaman_portfolio.ws
 
 ## 📝 Demo content
 
-`seed_data` preloads a realistic portfolio in all three languages — 9 projects across 4 categories (`ai`, `web`, `security`, `desktop`), tiered skills, services and testimonials. `seed_site_text` fills admin-editable UI strings and hero marquee tags without overwriting anything you already customized. Run them again anytime; both skip existing data.
+`seed_data` preloads a realistic portfolio in all three languages — 12 projects across 4 categories (`ai`, `web`, `security`, `desktop`), tiered skills, services and testimonials. `seed_site_text` fills admin-editable UI strings and hero marquee tags without overwriting anything you already customized. Run them again anytime; both skip existing data.
 
 ---
 

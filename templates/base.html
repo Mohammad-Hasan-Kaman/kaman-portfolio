@@ -20,7 +20,13 @@
   <meta name="twitter:description" content="{% tf profile 'tagline' %}">
   <meta name="twitter:image" content="https://mhkaman.com{% if profile.avatar %}{{ profile.avatar.url }}{% else %}/static/img/logo.svg{% endif %}">
   <meta name="author" content="Mohammad Hasan Kaman">
-  <link rel="canonical" href="https://mhkaman.com{{ request.path }}">
+  <link rel="canonical" href="https://{{ SITE_DOMAIN }}{{ request.path }}">
+
+  {# ---- hreflang: the same page in every language, plus x-default ---- #}
+  {% for l in LANGUAGES_LIST %}
+  <link rel="alternate" hreflang="{{ l.code }}" href="{% abs_lang_url l.code %}">
+  {% endfor %}
+  <link rel="alternate" hreflang="x-default" href="{% abs_lang_url 'en' %}">
 
   {# Structured data: tells Google exactly who owns this site and which profiles are official #}
   <script type="application/ld+json">

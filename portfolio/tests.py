@@ -189,3 +189,124 @@ class LlmsFilesTests(SeededTestCase):
         self.assertIn('12 Open-Source Repos', text)
         for project in Project.objects.all():
             self.assertIn(project.repo_url, text)
+
+
+class TestimonialHeadingTests(SeededTestCase):
+    """The section must not imply clients: the two cards are feedback."""
+
+    def test_heading_is_feedback_and_collaborators(self):
+        for lang, expected in (('en', 'Feedback & Collaborators'),
+                               ('fa', 'بازخورد و همکاران'),
+                               ('ar', 'آراء وتعاون')):
+            obj = SiteText.objects.get(key='testimonials.title')
+            self.assertEqual(getattr(obj, f'value_{lang}'), expected)
+
+    def test_no_client_wording_in_the_headings(self):
+        for lang in ('en', 'fa', 'ar'):
+            title = SiteText.objects.get(key='testimonials.title')
+            value = getattr(title, f'value_{lang}').lower()
+            self.assertNotIn('client', value)
+            self.assertNotIn('مشتری', value)
+            self.assertNotIn('عميل', value)
+
+    def test_both_cards_are_still_rendered(self):
+        from portfolio.models import Testimonial
+        self.assertEqual(Testimonial.objects.count(), 2)
+
+
+class HreflangTests(SeededTestCase):
+    """Every page advertises its language alternates and an x-default."""
+
+    def test_home_has_all_alternates(self):
+        response = self.client.get('/en/', secure=True)
+        self.assertEqual(response.status_code, 200)
+        body = response.content.decode('utf-8')
+        for code in ('en', 'fa', 'ar'):
+            self.assertIn(f'hreflang="{code}"', body)
+            self.assertIn(f'https://mhkaman.com/{code}/', body)
+        self.assertIn('hreflang="x-default"', body)
+        self.assertIn('https://mhkaman.com/en/', body)
+
+    def test_project_page_has_alternates(self):
+        response = self.client.get(
+            '/en/projects/kaman-ai-translator/', secure=True)
+        self.assertEqual(response.status_code, 200)
+        body = response.content.decode('utf-8')
+        self.assertIn('hreflang="fa"', body)
+        self.assertIn('hreflang="ar"', body)
+        self.assertIn(
+            'https://mhkaman.com/fa/projects/kaman-ai-translator/', body)
+        self.assertIn('hreflang="x-default"', body)
+
+    def test_canonical_uses_the_public_domain(self):
+        response = self.client.get('/fa/', secure=True)
+        body = response.content.decode('utf-8')
+        self.assertIn(
+            '<link rel="canonical" href="https://mhkaman.com/fa/">', body)
+
+
+class SitemapTests(SeededTestCase):
+    """The sitemap must list the CV pages and carry language alternates."""
+
+    def _sitemap(self, section=None):
+        url = '/sitemap.xml' if not section else f'/sitemap-{section}.xml'
+        response = self.client.get(url, secure=True)
+        self.assertEqual(response.status_code, 200)
+        return response.content.decode('utf-8')
+
+    def test_cv_pages_are_listed(self):
+        body = self._sitemap()
+        for code in ('en', 'fa', 'ar'):
+            self.assertIn(f'<loc>https://mhkaman.com/{code}/cv/</loc>', body)
+
+    def test_alternates_are_present(self):
+        body = self._sitemap()
+        self.assertIn('hreflang="fa"', body)
+        self.assertIn('hreflang="ar"', body)
+        self.assertIn('hreflang="x-default"', body)
+
+    def test_no_local_host_in_the_sitemap(self):
+        body = self._sitemap()
+        self.assertNotIn('127.0.0.1', body)
+        self.assertNotIn('localhost', body)
+        self.assertNotIn('testserver', body)
+
+
+class CvContentTests(SeededTestCase):
+    """The CV source of truth must carry the verified facts and no guesses."""
+
+    @staticmethod
+    def _data():
+        import importlib
+        import cv_data
+        importlib.reload(cv_data)
+        return cv_data.DATA
+
+    def test_every_project_shows_its_real_release(self):
+        releases = [
+            'v3.0.0', 'v0.2.0', 'v1.0.0', 'v1.1.0', 'v7.0.1',
+            'v10.0.0', 'v1.2.1',
+        ]
+        for lang in ('en', 'fa', 'ar'):
+            projects = self._data()[lang]['sections'][0][1]
+            headers = ' '.join(h for _, h, _ in projects)
+            for release in releases:
+                self.assertIn(release, headers, f'{lang} misses {release}')
+
+    def test_unverifiable_claims_are_gone(self):
+        for lang in ('en', 'fa', 'ar'):
+            blob = str(self._data()[lang])
+            self.assertNotIn('Bootstrap', blob)
+            self.assertNotIn('PyCharm', blob)
+            self.assertNotIn('VS Code', blob)
+
+    def test_verified_facts_are_present(self):
+        en = str(self._data()['en'])
+        self.assertIn('303 offline tests', en)
+        self.assertIn('Twelve named checks', en)
+        self.assertIn('Edge WebView2', en)
+        self.assertIn('CustomTkinter', en)
+        self.assertIn('yt-dlp', en)
+        self.assertIn('FastAPI', en)
+        self.assertIn('django-allauth', en)
+        self.assertIn('jdatetime', en)

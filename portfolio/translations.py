@@ -59,7 +59,7 @@ STRINGS = {
             'back': 'Back to Articles', 'next': 'Next Article',
             'empty': 'No articles yet — new ones are coming soon.',
         },
-        'testimonials': {'label': 'Testimonials', 'title': 'What clients say', 'subtitle': 'Feedback from people I have worked with.'},
+        'testimonials': {'label': 'Feedback', 'title': 'Feedback & Collaborators', 'subtitle': 'Feedback from people I have worked with.'},
         'contact': {
             'label': 'Contact',
             'title': "Let's build something great",
@@ -130,7 +130,7 @@ STRINGS = {
             'back': 'بازگشت به مقالات', 'next': 'مقاله بعدی',
             'empty': 'هنوز مقاله‌ای منتشر نشده — به‌زودی مقالات جدید اضافه می‌شود.',
         },
-        'testimonials': {'label': 'نظرات', 'title': 'مشتریان چه می‌گویند', 'subtitle': 'بازخورد افرادی که با آن‌ها کار کرده‌ام.'},
+        'testimonials': {'label': 'بازخورد', 'title': 'بازخورد و همکاران', 'subtitle': 'بازخورد افرادی که با آن‌ها کار کرده‌ام.'},
         'contact': {
             'label': 'تماس',
             'title': 'بیایید چیز فوق‌العاده‌ای بسازیم',
@@ -201,7 +201,7 @@ STRINGS = {
             'back': 'العودة إلى المقالات', 'next': 'المقال التالي',
             'empty': 'لا توجد مقالات بعد — ستُنشر مقالات جديدة قريباً.',
         },
-        'testimonials': {'label': 'آراء العملاء', 'title': 'ماذا يقول العملاء', 'subtitle': 'آراء الأشخاص الذين عملت معهم.'},
+        'testimonials': {'label': 'آراء', 'title': 'آراء وتعاون', 'subtitle': 'آراء الأشخاص الذين عملت معهم.'},
         'contact': {
             'label': 'تواصل',
             'title': 'لنبنِ شيئاً رائعاً معاً',

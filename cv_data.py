@@ -54,43 +54,43 @@ DATA = {
                  'GHQ-28 wellbeing screen and a SpiralMatchEngine that re-weights itself from panel feedback. Admins run '
                  'statistics, Excel import/export, broadcasts and engine training from inside the chat. No external API, '
                  'no cloud LLM.'),
-                ('Kaman Portfolio — Trilingual Django Portfolio & CV Generator', '2024 — 2026  ·  Personal  ·  Live at mhkaman.com',
+                ('Kaman Portfolio — Trilingual Django Portfolio & CV Generator', '2024 — 2026  ·  Personal  ·  Live at mhkaman.com  ·  v1.0.0',
                  'The portfolio behind this CV: a trilingual (EN/FA/AR) Django site where every page is editable from the '
                  'Django admin, with a trilingual PDF CV generator that shapes RTL text with HarfBuzz, privacy-friendly '
                  'server-side analytics, and sitemap, robots.txt and llms.txt built in.'),
-                ('Kaman Messenger — Encrypted Real-Time Chat', '2022 — 2023  ·  Personal',
+                ('Kaman Messenger — Encrypted Real-Time Chat', '2022 — 2023  ·  Personal  ·  v7.0.1',
                  'Real-time encrypted messenger built completely from scratch: raw TCP sockets, AES (Fernet) encryption, '
                  'bcrypt authentication, rate limiting and SQLite storage, with a CustomTkinter GUI. Ships as a client '
                  'and a server executable.'),
-                ('Dr-Kaman Site — Multimedia Archive (Django)', '2023 — 2024  ·  Client Project  ·  Live at drkaman.ir',
+                ('Dr-Kaman Site — Multimedia Archive (Django)', '2023 — 2024  ·  Client Project  ·  Live at drkaman.ir  ·  v1.1.0',
                  'Django-based CMS with secure user authentication and SQLite storage, multi-format media management '
                  '(video/audio playback) and dynamic categorized content delivery, deployed with nginx and gunicorn on a '
                  'Linux VPS.'),
-                ('Planikaa Portal — Educational Platform (Django)', '2023  ·  Client Project',
+                ('Planikaa Portal — Educational Platform (Django)', '2023  ·  Client Project  ·  v10.0.0',
                  'Django educational platform for exam and competition analysis: visual dashboards, an educational blog, '
                  'a review and feedback system, Jalali (Persian) calendar support and django-allauth accounts. SQLite '
                  'storage.'),
-                ('Kaman Web Browser — Desktop Web Browser', '2023  ·  Personal',
+                ('Kaman Web Browser — Desktop Web Browser', '2023  ·  Personal  ·  v1.1.0',
                  'A desktop web browser built in C# on the Edge WebView2 (Chromium) engine: tabbed navigation, address '
                  'bar with search fallback, back/forward history, bookmarks and a native Windows shell around a real '
                  'browser engine.'),
-                ('Kaman AI Chat — Desktop Chat Assistant (C#)', '2023  ·  Personal',
+                ('Kaman AI Chat — Desktop Chat Assistant (C#)', '2023  ·  Personal  ·  v1.1.0',
                  'C# WinForms chat assistant running DeepSeek models via the OpenModel API, with voice output through the '
                  'Windows built-in text-to-speech engine. The API key is resolved at runtime from an environment variable, '
                  'app.config or a per-user settings file — never baked into the source. Single dependency-free .exe.'),
-                ('Quran Group Bot — Serverless Bale Bot', '2023  ·  Personal',
+                ('Quran Group Bot — Serverless Bale Bot', '2023  ·  Personal  ·  v1.2.1',
                  'Serverless bot for weekly Quran juz reading groups on Bale Messenger: Cloudflare Workers + KV, '
                  'cron-scheduled posts, rotating juz assignment and a weekly hadith. No server, no hosting bill.'),
-                ('YouTube Downloader — Desktop Utility', '2023  ·  Personal',
+                ('YouTube Downloader — Desktop Utility', '2023  ·  Personal  ·  v1.0.0',
                  'Windows YouTube downloader built on yt-dlp with a Persian dark-mode GUI, three live progress bars, '
                  'video and audio format selection and browser-cookie support for age-restricted or private links.'),
             ]),
             ('Technical Skills', [
                 ('Programming Languages', '', 'Python, C#, JavaScript, HTML, CSS'),
-                ('Frameworks & Libraries', '', 'Django, Windows Forms, Edge WebView2, PyQt6, CustomTkinter, Bootstrap'),
-                ('Databases', '', 'SQLite, SQL, Cloudflare KV'),
+                ('Frameworks & Libraries', '', 'Django, FastAPI, Windows Forms, Edge WebView2, PyQt6, CustomTkinter, yt-dlp, django-allauth, jdatetime'),
+                ('Databases', '', 'SQLite, SQL, Cloudflare KV, Jalali (Persian) calendar via jdatetime'),
                 ('AI & LLM Engineering', '', 'Gemini API, OpenAI-compatible APIs, DeepSeek, SSE Streaming, Tool Calling, GHQ-28 screening, concept extraction, PDF/EPUB processing'),
-                ('Tools & Infrastructure', '', 'Git, nginx, gunicorn, Linux VPS, Cloudflare Workers/KV, REST APIs, VS Code, PyCharm, Visual Studio'),
+                ('Tools & Infrastructure', '', 'Git, nginx, gunicorn, Linux VPS, Cloudflare Workers/KV, REST APIs, Docker'),
                 ('Networking & Security', '', 'TCP Sockets, AES/Fernet encryption, bcrypt, rate limiting, proxy configuration, Network+ concepts'),
             ]),
             ('Education', [
@@ -143,38 +143,38 @@ DATA = {
                  'همان هوش پذیرش بالینی، این بار به‌شکل ربات پیام‌رسان بله: گفتگوی هدایت‌شده با ۱۲ وضعیت، تست '
                  'GHQ-28 و موتور SpiralMatchEngine که از بازخورد پنل خودش را بازتنظیم می‌کند. مدیران آمار، ورود/خروج '
                  'اکسل، پیام همگانی و آموزش موتور را از داخل گفتگو انجام می‌دهند. بدون API خارجی، بدون LLM ابری.'),
-                ('پورتفولیوی کَمَن — سایت سه‌زبانهٔ جنگو و تولیدکنندهٔ CV', '۲۰۲۴ — ۲۰۲۶  ·  شخصی  ·  زنده در mhkaman.com',
+                ('پورتفولیوی کَمَن — سایت سه‌زبانهٔ جنگو و تولیدکنندهٔ CV', '۲۰۲۴ — ۲۰۲۶  ·  شخصی  ·  زنده در mhkaman.com  ·  v1.0.0',
                  'پورتفولیویی که همین رزومه در آن قرار دارد: سایت سه‌زبانهٔ (انگلیسی/فارسی/عربی) جنگو که همهٔ '
                  'صفحه‌هایش از پنل ادمین قابل ویرایش است، به‌همراه تولیدکنندهٔ CV سه‌زبانهٔ PDF با شکل‌دهی متن '
                  'راست‌به‌چپ توسط HarfBuzz، تحلیل حریم‌خصوصی سمت سرور و sitemap، robots.txt و llms.txt آماده.'),
-                ('پیام‌رسان کَمَن — گفتگوی رمزنگاری‌شده بلادرنگ', '۲۰۲۲ — ۲۰۲۳  ·  شخصی',
+                ('پیام‌رسان کَمَن — گفتگوی رمزنگاری‌شده بلادرنگ', '۲۰۲۲ — ۲۰۲۳  ·  شخصی  ·  v7.0.1',
                  'پیام‌رسان رمزنگاری‌شدهٔ بلادرنگ که کاملاً از صفر ساخته شده: سوکت TCP خام، رمزنگاری AES (Fernet)، '
                  'احراز هویت bcrypt، محدودسازی نرخ و پایگاه داده SQLite — با رابط CustomTkinter. به‌صورت اجرایی '
                  'کلاینت و سرور منتشر می‌شود.'),
-                ('سایت دکتر کَمَن — آرشیو چندرسانه‌ای (جنگو)', '۲۰۲۳ — ۲۰۲۴  ·  پروژه مشتری  ·  زنده در drkaman.ir',
+                ('سایت دکتر کَمَن — آرشیو چندرسانه‌ای (جنگو)', '۲۰۲۳ — ۲۰۲۴  ·  پروژه مشتری  ·  زنده در drkaman.ir  ·  v1.1.0',
                  'پلتفرم CMS مبتنی بر جنگو با احراز هویت امن و ذخیره‌سازی SQLite، مدیریت رسانه چندقالبه (پخش '
                  'ویدیو/صوت) و ارائهٔ محتوای پویا و دسته‌بندی‌شده، مستقر با nginx و gunicorn روی سرور لینوکسی.'),
-                ('پورتال پلنیکا — پلتفرم آموزشی (جنگو)', '۲۰۲۳  ·  پروژه مشتری',
+                ('پورتال پلنیکا — پلتفرم آموزشی (جنگو)', '۲۰۲۳  ·  پروژه مشتری  ·  v10.0.0',
                  'پلتفرم آموزشی جنگو برای تحلیل آزمون‌ها و مسابقات: داشبوردهای بصری، وبلاگ آموزشی، سیستم نظرات و '
                  'بازخورد، پشتیبانی از تقویم هجری شمسی و حساب‌های django-allauth. ذخیره‌سازی با SQLite.'),
-                ('مرورگر وب کَمَن — مرورگر دسکتاپ', '۲۰۲۳  ·  شخصی',
+                ('مرورگر وب کَمَن — مرورگر دسکتاپ', '۲۰۲۳  ·  شخصی  ·  v1.1.0',
                  'مرورگر وب دسکتاپی ساخته‌شده با C# روی موتور Edge WebView2 (Chromium): ناوبری با زبانه‌ها، نوار '
                  'آدرس با جست‌وجوی جایگزین، تاریخچهٔ رفت‌وبرگشت، نشانک‌ها و پوستهٔ بومی ویندوز دور یک موتور مرورگر واقعی.'),
-                ('چت هوشمند کَمَن — دستیار گفتگوی دسکتاپ (C#)', '۲۰۲۳  ·  شخصی',
+                ('چت هوشمند کَمَن — دستیار گفتگوی دسکتاپ (C#)', '۲۰۲۳  ·  شخصی  ·  v1.1.0',
                  'دستیار گفتگوی دسکتاپ با C# و WinForms که مدل‌های DeepSeek را از طریق OpenModel API اجرا می‌کند و '
                  'پاسخ را با موتور گفتار داخلی ویندوز می‌خواند. کلید API در زمان اجرا از متغیر محیطی، app.config یا '
                  'فایل تنظیمات کاربر خوانده می‌شود — هرگز در سورس قرار نمی‌گیرد. یک فایل اجرایی مستقل و بدون وابستگی.'),
-                ('ربات گروه قرآن — ربات بدون سرور بله', '۲۰۲۳  ·  شخصی',
+                ('ربات گروه قرآن — ربات بدون سرور بله', '۲۰۲۳  ·  شخصی  ·  v1.2.1',
                  'ربات بدون سرور برای گروه‌های هفتگی قرائت جزء قرآن در پیام‌رسان بله — Cloudflare Workers و KV با '
                  'زمان‌بندی کرون، نوبت‌بندی چرخشی جزء و حدیث هفتگی. بدون سرور و بدون فاکتور هاستینگ.'),
-                ('دانلودر یوتیوب — ابزار دسکتاپ', '۲۰۲۳  ·  شخصی',
+                ('دانلودر یوتیوب — ابزار دسکتاپ', '۲۰۲۳  ·  شخصی  ·  v1.0.0',
                  'دانلودر یوتیوب ویندوزی بر پایهٔ yt-dlp با رابط گرافیکی تیره و فارسی، سه نوار پیشرفت زنده، انتخاب '
                  'قالب ویدیو و صدا و پشتیبانی از کوکی مرورگر برای لینک‌های محدودشده یا خصوصی.'),
             ]),
             ('مهارت‌های فنی', [
                 ('زبان‌های برنامه‌نویسی', '', 'Python، C#، JavaScript، HTML، CSS'),
-                ('فریم‌ورک‌ها و کتابخانه‌ها', '', 'Django، Windows Forms، Edge WebView2، PyQt6، CustomTkinter، Bootstrap'),
-                ('پایگاه داده', '', 'SQLite، SQL، Cloudflare KV'),
+                ('فریم‌ورک‌ها و کتابخانه‌ها', '', 'Django، FastAPI، Windows Forms، Edge WebView2، PyQt6، CustomTkinter، yt-dlp، django-allauth، jdatetime'),
+                ('پایگاه داده', '', 'SQLite، SQL، Cloudflare KV، تقویم هجری شمسی با jdatetime'),
                 ('مهندسی هوش مصنوعی و LLM', '', 'Gemini API، APIهای سازگار با OpenAI، DeepSeek، SSE Streaming، Tool Calling، غربال GHQ-28، استخراج مفهوم، پردازش PDF/EPUB'),
                 ('ابزارها و زیرساخت', '', 'Git، nginx، gunicorn، لینوکس VPS، Cloudflare Workers/KV، REST API'),
                 ('شبکه و امنیت', '', 'سوکت TCP، رمزنگاری AES/Fernet، bcrypt، محدودسازی نرخ، پیکربندی پراکسی، مفاهیم Network+'),
@@ -225,37 +225,37 @@ DATA = {
                  'نفس ذكاء الاستقبال السريري، لكن كبوت على مراسلة Bale: محادثة موجّهة باثنتي عشرة حالة، وفحص GHQ-28، '
                  'ومحرك SpiralMatchEngine يعيد ضبط نفسه من تغذية راجعة اللوحة. يدير المشرفون الإحصاءات واستيراد/'
                  'تصدير Excel والبثّ وتدريب المحرك من داخل المحادثة. دون API خارجي ولا نموذج سحابي.'),
-                ('ملف أعمال كَمَن — موقع Django ثلاثي اللغات ومولّد السيرة الذاتية', '٢٠٢٤ — ٢٠٢٦  ·  مشروع شخصي  ·  يعمل على mhkaman.com',
+                ('ملف أعمال كَمَن — موقع Django ثلاثي اللغات ومولّد السيرة الذاتية', '٢٠٢٤ — ٢٠٢٦  ·  مشروع شخصي  ·  يعمل على mhkaman.com  ·  v1.0.0',
                  'ملف الأعمال الذي تضمه هذه السيرة الذاتية: موقع Django ثلاثي اللغات (EN/FA/AR) تُحرَّر كل صفحاته من '
                  'لوحة الإدارة، مع مولّد سيرة ذاتية PDF ثلاثي اللغات يشكّل النص من اليمين إلى اليسار عبر HarfBuzz، '
                  'وتحليلات تحافظ على الخصوصية، وsitemap وrobots.txt وllms.txt مدمجة.'),
-                ('مرسال كَمَن — محادثة مشفّرة فورية', '٢٠٢٢ — ٢٠٢٣  ·  شخصي',
+                ('مرسال كَمَن — محادثة مشفّرة فورية', '٢٠٢٢ — ٢٠٢٣  ·  شخصي  ·  v7.0.1',
                  'مرسال مشفّر فوري مبني بالكامل من الصفر: مقابس TCP الخام، تشفير AES (Fernet)، مصادقة bcrypt، تحديد '
                  'المعدل وقاعدة بيانات SQLite — بواجهة CustomTkinter. يُنشر كملفَّذي عميل وخادم.'),
-                ('موقع د. كَمَن — أرشيف وسائط متعددة (Django)', '٢٠٢٣ — ٢٠٢٤  ·  مشروع عميل  ·  يعمل على drkaman.ir',
+                ('موقع د. كَمَن — أرشيف وسائط متعددة (Django)', '٢٠٢٣ — ٢٠٢٤  ·  مشروع عميل  ·  يعمل على drkaman.ir  ·  v1.1.0',
                  'منصة CMS مبنية على Django مع مصادقة آمنة وتخزين SQLite، وإدارة وسائط متعددة الصيغ (تشغيل فيديو/صوت)، '
                  'وتقديم محتوى ديناميكي مصنّف، منشورة مع nginx و gunicorn على خادم Linux.'),
-                ('بوابة بلانيكا — منصة تعليمية (Django)', '٢٠٢٣  ·  مشروع عميل',
+                ('بوابة بلانيكا — منصة تعليمية (Django)', '٢٠٢٣  ·  مشروع عميل  ·  v10.0.0',
                  'منصة تعليمية Django لتحليل الاختبارات والمسابقات: لوحات بصرية، ومدونة تعليمية، ونظام مراجعات وتغذية '
                  'راجعة، ودعم التقويم الهجري Solar، وحسابات django-allauth. التخزين عبر SQLite.'),
-                ('متصفح كَمَن — متصفح سطح مكتب', '٢٠٢٣  ·  شخصي',
+                ('متصفح كَمَن — متصفح سطح مكتب', '٢٠٢٣  ·  شخصي  ·  v1.1.0',
                  'متصفح ويب لسطح المكتب مبني بـ C# على محرك Edge WebView2 (Chromium): تنقّل بتبويبات، شريط عنوان مع '
                  'بحث احتياطي، سجل رجوع وتقدّم، مفضّلة، وغلاف أصلي لويندوز حول محرك متصفح حقيقي.'),
-                ('دردشة كَمَن الذكية — مساعد سطح مكتب (C#)', '٢٠٢٣  ·  شخصي',
+                ('دردشة كَمَن الذكية — مساعد سطح مكتب (C#)', '٢٠٢٣  ·  شخصي  ·  v1.1.0',
                  'مساعد دردشة سطح مكتب بـ C# و WinForms يشغّل نماذج DeepSeek عبر OpenModel API وينطق الردّ بمحرك النطق '
                  'المدمج في ويندوز. تُقرأ مفتاح API عند التشغيل من متغيّر بيئة أو app.config أو ملف إعدادات المستخدم — ولا '
                  'تُدمج في الشيفرة أبداً. ملف تنفيذي واحد بلا تبعيات.'),
-                ('بوت مجموعة القرآن — بوت بلا خادم على Bale', '٢٠٢٣  ·  شخصي',
+                ('بوت مجموعة القرآن — بوت بلا خادم على Bale', '٢٠٢٣  ·  شخصي  ·  v1.2.1',
                  'بوت بلا خادم لمجموعات قراءة جزء القرآن الأسبوعية على مراسلة Bale — Cloudflare Workers و KV مع جدولة '
                  'cron، وإسناد متناوب للأجزاء، وحديث أسبوعي. دون خادم ولا فاتورة استضافة.'),
-                ('محمّل يوتيوب — أداة سطح مكتب', '٢٠٢٣  ·  شخصي',
+                ('محمّل يوتيوب — أداة سطح مكتب', '٢٠٢٣  ·  شخصي  ·  v1.0.0',
                  'محمّل يوتيوب لويندوز مبني على yt-dlp بواجهة داكنة فارسية، وثلاثة أشرطة تقدّم حيّة، واختيار صيغة '
                  'الفيديو والصوت، ودعم ملفات تعريف الارتباط للمتصفح للروابط المقيّدة أو الخاصة.'),
             ]),
             ('المهارات التقنية', [
                 ('لغات البرمجة', '', 'Python، C#، JavaScript، HTML، CSS'),
-                ('الأطر والمكتبات', '', 'Django، Windows Forms، Edge WebView2، PyQt6، CustomTkinter، Bootstrap'),
-                ('قواعد البيانات', '', 'SQLite، SQL، Cloudflare KV'),
+                ('الأطر والمكتبات', '', 'Django، FastAPI، Windows Forms، Edge WebView2، PyQt6، CustomTkinter، yt-dlp، django-allauth، jdatetime'),
+                ('قواعد البيانات', '', 'SQLite، SQL، Cloudflare KV، التقويم الهجري Solar عبر jdatetime'),
                 ('هندسة الذكاء الاصطناعي و LLM', '', 'Gemini API، واجهات متوافقة مع OpenAI، DeepSeek، SSE Streaming، Tool Calling، فحص GHQ-28، استخراج المفاهيم، معالجة PDF/EPUB'),
                 ('الأدوات والبنية التحتية', '', 'Git، nginx، gunicorn، خوادم Linux، Cloudflare Workers/KV، REST APIs'),
                 ('الشبكات والأمان', '', 'مقابس TCP، تشفير AES/Fernet، bcrypt، تحديد المعدل، إعدادات البروكسي، مفاهيم Network+'),

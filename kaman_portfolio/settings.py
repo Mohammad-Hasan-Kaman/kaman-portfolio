@@ -93,4 +93,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+# Public domain used for canonical URLs, hreflang and the sitemap.
+SITE_DOMAIN = 'mhkaman.com'
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

@@ -42,6 +42,16 @@ def lang_url(context, lang_code):
     return translate_url(request.get_full_path(), lang_code)
 
 
+@register.simple_tag(takes_context=True)
+def abs_lang_url(context, lang_code):
+    """Absolute URL of the current path in the given language (no query string)."""
+    from django.conf import settings
+    from django.urls import translate_url
+    request = context['request']
+    path = translate_url(request.path, lang_code)
+    return f'https://{settings.SITE_DOMAIN}{path}'
+
+
 @register.simple_tag
 def total_visits():
     from .models import Visit
