@@ -140,14 +140,22 @@ class ContentInventoryTests(SeededTestCase):
 
 
 class HomePageTests(SeededTestCase):
+    # secure=True mirrors the production setup: nginx terminates TLS and
+    # Django's SECURE_SSL_REDIRECT would otherwise answer 301 in tests.
     def test_home_renders_the_real_project_count(self):
-        response = self.client.get(reverse('portfolio:home'))
+        response = self.client.get(reverse('portfolio:home'), secure=True)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.context['repo_count'], Project.objects.count())
 
     def test_home_shows_four_years_of_experience(self):
-        response = self.client.get(reverse('portfolio:home'))
+        response = self.client.get(reverse('portfolio:home'), secure=True)
         self.assertEqual(response.context['profile'].years_experience, 4)
+
+    def test_home_renders_in_every_language(self):
+        for prefix in ('en', 'fa', 'ar'):
+            response = self.client.get(f'/{prefix}/', secure=True)
+            self.assertEqual(response.status_code, 200, prefix)
+            self.assertContains(response, 'data-count="12"')
 
 class LlmsFilesTests(SeededTestCase):
     """The machine-readable files must describe the real database."""
