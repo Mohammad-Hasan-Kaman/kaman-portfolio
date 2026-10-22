@@ -29,8 +29,18 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-The settings module reads `SECRET_KEY`, `DEBUG`, `ALLOWED_HOSTS` and the
-`EMAIL_HOST_*` values from the environment.
+`kaman_portfolio/settings.py` is the development settings module and keeps its
+values inline. The production module, `kaman_portfolio/settings_prod.py`, reads
+its configuration from the environment — `DJANGO_SECRET_KEY`, `DJANGO_DEBUG`,
+`DJANGO_ALLOWED_HOSTS`, `DJANGO_CSRF_TRUSTED_ORIGINS`, `DJANGO_SSL_REDIRECT`,
+`DJANGO_HSTS_SECONDS`, `DJANGO_DB_NAME`, the `DJANGO_EMAIL_*` values and
+`DJANGO_SERVER_EMAIL` — with a `.env` file next to `manage.py` as the fallback
+source. Copy `.env.example` to `.env` and fill it in; never commit the real
+file. Run the production stack with:
+
+```bash
+DJANGO_SETTINGS_MODULE=kaman_portfolio.settings_prod gunicorn kaman_portfolio.wsgi
+```
 
 
 ## Making a change
