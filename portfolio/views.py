@@ -32,8 +32,12 @@ def _t(request):
 def home(request):
     profile = get_profile()
     projects = Project.objects.all()
+    # The hero "Open-Source Repos" counter must reflect the real number of
+    # published projects that link to a source repository.
+    repo_count = projects.exclude(repo_url='').count()
     context = {
         'profile': profile,
+        'repo_count': repo_count,
         'skills': Skill.objects.all(),
         'services': Service.objects.all(),
         'testimonials': Testimonial.objects.all(),

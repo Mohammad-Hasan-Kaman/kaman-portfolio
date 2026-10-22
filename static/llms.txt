@@ -1,8 +1,8 @@
 # Mohammad Hasan Kaman — Full-Stack Developer
 
-> Trilingual (EN/FA/AR) portfolio of Mohammad Hasan Kaman: full-stack developer building AI applications, developer tooling, and secure systems in Python and C#. Site includes live project case studies, a downloadable CV in three languages, and technical articles. Open to full-stack / Python / Django opportunities — remote or relocation.
+> Trilingual (EN/FA/AR) portfolio of Mohammad Hasan Kaman: full-stack developer building AI applications, developer tooling, and secure systems in Python and C#. The site includes 12 public project case studies (each with a live repository), a downloadable CV in three languages, and technical articles. Open to full-stack / Python / Django opportunities — remote.
 
-Contact: contact form at https://mhkaman.com/en/#contact · Email: mohammadhasankaman@gmail.com · Location: Iran
+Contact: contact form at https://mhkaman.com/en/#contact · Email: mohammadhasankaman@gmail.com · Location: Germany (Remote)
 
 ## Pages
 
@@ -12,25 +12,37 @@ Contact: contact form at https://mhkaman.com/en/#contact · Email: mohammadhasan
 - [CV / Résumé (English)](https://mhkaman.com/en/cv/): Complete résumé, printable, with PDF download in all three languages
 - [CV (Persian)](https://mhkaman.com/fa/cv/): رزومهٔ کامل فارسی
 - [CV (Arabic)](https://mhkaman.com/ar/cv/): السيرة الذاتية الكاملة
+- [Full text for LLMs](https://mhkaman.com/static/llms-full.txt): plain-text mirror of all public page content
 
-## Featured Projects
+## Projects (12 public repositories)
 
-- [Agent Stream Doctor](https://mhkaman.com/en/projects/agent-stream-doctor/): Open-source Python toolkit diagnosing broken LLM streams: empty responses, reasoning-only replies, missing finish_reason, malformed SSE, truncated tool calls. Zero dependencies. [Source](https://github.com/Mohammad-Hasan-Kaman/agent-stream-doctor)
-- [Kaman AI Translator](https://mhkaman.com/en/projects/kaman-ai-translator/): Desktop app translating PDF & EPUB books from English to academic Persian using Google Gemini. PyQt6.
-- [Kaman Messenger](https://mhkaman.com/en/projects/kaman-messenger/): Real-time encrypted desktop messenger in pure Python: TCP sockets, AES (Fernet), bcrypt, rate limiting, SQLite. CustomTkinter GUI.
-- [Dr-Kaman Site](https://mhkaman.com/en/projects/dr-kaman-site/): Production multimedia archive (audio, video, books, articles) serving drkaman.ir. Django + nginx + gunicorn.
-- [Planikaa Portal](https://mhkaman.com/en/projects/planikaa-portal/): Django educational platform with exam analytics dashboard, blog, and student resources.
+- [Kaman AI Translator](https://mhkaman.com/en/projects/kaman-ai-translator/): PyQt6 desktop studio translating whole PDF and EPUB books into academic Persian and back into English, with per-book structure templates, a QC review loop, DPAPI-encrypted API keys and 303 offline tests. Windows release v3.0.0. [Source](https://github.com/Mohammad-Hasan-Kaman/kaman-ai-translator)
+- [Agent Stream Doctor](https://mhkaman.com/en/projects/agent-stream-doctor/): Zero-dependency Python toolkit diagnosing broken LLM streams: reasoning-only replies, missing finish_reason, malformed SSE framing, truncated tool calls. Twelve named checks, JSON output for CI. Release v0.2.0. [Source](https://github.com/Mohammad-Hasan-Kaman/agent-stream-doctor)
+- [AI Counseling Widget](https://mhkaman.com/en/projects/ai-counseling-widget/): Persian RTL chat widget for counselling centres — GHQ-28 wellbeing screening, clinical concept extraction, consultant matching, multi-tenant API keys. Live at kahaai.ir. Release v1.0.0. [Source](https://github.com/Mohammad-Hasan-Kaman/ai-counseling-widget)
+- [AI Counseling Bot](https://mhkaman.com/en/projects/ai-counseling-bot/): The same clinical intake as a Bale messenger bot — 12-state guided interview, GHQ-28 screening, a self-tuning matching engine, admin statistics and Excel import/export from inside the chat. Live at kahaai.ir. Release v1.0.0. [Source](https://github.com/Mohammad-Hasan-Kaman/ai-counseling-bot)
+- [Kaman Portfolio](https://mhkaman.com/en/projects/kaman-portfolio/): This site — a trilingual Django portfolio, every page editable from the admin, with a trilingual PDF CV generator (HarfBuzz RTL shaping), server-side privacy-friendly analytics, sitemap, robots.txt and llms.txt. Live at mhkaman.com. [Source](https://github.com/Mohammad-Hasan-Kaman/kaman-portfolio)
+- [Kaman Messenger](https://mhkaman.com/en/projects/kaman-messenger/): Real-time encrypted desktop messenger built from scratch: raw TCP sockets, Fernet (AES) traffic encryption, bcrypt auth, rate limiting, SQLite, CustomTkinter GUI. [Source](https://github.com/Mohammad-Hasan-Kaman/kaman-messenger)
+- [Dr-Kaman Site](https://mhkaman.com/en/projects/dr-kaman-site/): Production multimedia archive (audio, video, books, articles) with cross-media search and SEO endpoints, serving drkaman.ir. Django + nginx + gunicorn. [Source](https://github.com/Mohammad-Hasan-Kaman/dr-kaman-site)
+- [Planikaa Portal](https://mhkaman.com/en/projects/planikaa-portal/): Django educational platform with exam and competition analysis dashboards, an educational blog, a review system, django-allauth authentication and Jalali (Persian) calendar support. SQLite. [Source](https://github.com/Mohammad-Hasan-Kaman/planikaa-portal)
+- [Kaman AI Chat](https://mhkaman.com/en/projects/kaman-ai-chat/): C# Windows Forms chat client for DeepSeek models through the OpenModel API, with native Windows text-to-speech — standard WinForms, one .exe. [Source](https://github.com/Mohammad-Hasan-Kaman/kaman-ai-chat)
+- [Quran Group Bot](https://mhkaman.com/en/projects/quran-group-bot/): Serverless Bale messenger bot for weekly Quran juz reading groups, running on Cloudflare Workers with KV storage. [Source](https://github.com/Mohammad-Hasan-Kaman/quran-group-bot)
+- [YouTube Downloader](https://mhkaman.com/en/projects/youtube-downloader/): Desktop downloader with a Persian RTL interface, live progress and quality selection, built on yt-dlp. [Source](https://github.com/Mohammad-Hasan-Kaman/youtube-downloader)
+- [Kaman Web Browser](https://mhkaman.com/en/projects/kaman-web-browser/): Multi-tab Windows web browser on Microsoft Edge WebView2 (Chromium) with C#, tab management and bookmarks. [Source](https://github.com/Mohammad-Hasan-Kaman/kaman-web-browser)
 
 ## Articles
 
-- [Why is my LLM stream empty? A field guide to broken SSE responses](https://mhkaman.com/en/articles/why-is-my-llm-stream-empty/): Practical guide to diagnosing empty LLM responses, reasoning-only streams, and missing finish_reason in OpenAI-compatible APIs.
+- [Why is my LLM stream empty? A field guide to broken SSE responses](https://mhkaman.com/en/articles/why-is-my-llm-stream-empty/): Reasoning-only replies, missing finish_reason and malformed SSE frames — the four most common reasons a streaming LLM call returns nothing, and how to diagnose each one.
+- [Building a Persian-first desktop translator for PDF and EPUB books](https://mhkaman.com/en/articles/building-a-persian-first-desktop-translator-for-pdf-and-epub-books/): Chunking, rolling context and a per-book structure template — how a 300-page book survives translation without the model drifting into summarising.
+- [Building an AI counseling widget that matches visitors to the right counselor](https://mhkaman.com/en/articles/building-an-ai-counseling-widget-that-matches-visitors-to-counselors/): A drop-in Persian RTL chat widget with a structured intake, the GHQ-28 wellbeing screen, clinical concept extraction and per-clinic API keys — without a hosted LLM.
+- [Shipping a counseling bot on Bale](https://mhkaman.com/en/articles/shipping-a-counseling-bot-on-bale-with-ghq-28-screening-and-self-learning-matching/): A 12-state conversation handler, the GHQ-28 screen, a matching engine that re-weights itself from panel feedback, an availability crawler and Excel import/export — all inside the messenger.
 
 ## Key Facts
 
-- Languages: English (fluent, professional), Persian (native), Arabic (working)
+- Experience: 4 years of shipping production software (2022 → 2026)
+- Languages: Persian (native), Arabic (fluent), English (upper-intermediate)
 - Core stack: Python, Django, C# (.NET WinForms), JavaScript, PyQt6, CustomTkinter
 - AI engineering: OpenAI-compatible APIs, Gemini, DeepSeek, SSE streaming, tool calling
-- Infrastructure: nginx, gunicorn, systemd, BIND9 DNS (own nameservers), Let's Encrypt, Cloudflare Workers
-- Databases: SQLite, familiar with PostgreSQL
+- Infrastructure: nginx, gunicorn, systemd, BIND9 DNS (own nameservers), Let's Encrypt, Cloudflare Workers, Docker
+- Databases: SQLite (the backend these projects actually use)
 - Expected graduation (high school): mid-2028
 - Profiles: [GitHub](https://github.com/Mohammad-Hasan-Kaman) · [X/Twitter](https://x.com/kaman_hasan0975) · [LinkedIn](https://www.linkedin.com/in/kaman-programmer) · [Telegram](https://t.me/mohaka0975)

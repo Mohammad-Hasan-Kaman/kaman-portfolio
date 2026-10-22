@@ -25,7 +25,7 @@ STRINGS = {
             'cta_contact': "Let's Talk",
             'available': 'Available for work',
         },
-        'stats': {'years': 'Years Building Software', 'projects': 'Projects Delivered', 'clients': 'Happy Clients', 'repos': 'Open-Source Repos'},
+        'stats': {'years': 'Years Building Software', 'projects': 'Projects Delivered', 'repos': 'Open-Source Repos'},
         'about': {
             'label': 'About Me',
             'title': 'Turning complex problems into elegant software',
@@ -96,7 +96,7 @@ STRINGS = {
             'cta_contact': 'ارتباط با من',
             'available': 'آماده همکاری',
         },
-        'stats': {'years': 'سال ساخت نرم‌افزار', 'projects': 'پروژه تحویل‌شده', 'clients': 'مشتری راضی', 'repos': 'مخزن متن‌باز'},
+        'stats': {'years': 'سال ساخت نرم‌افزار', 'projects': 'پروژه تحویل‌شده', 'repos': 'مخزن متن‌باز'},
         'about': {
             'label': 'درباره من',
             'title': 'تبدیل مسائل پیچیده به نرم‌افزارهای شیک',
@@ -167,7 +167,7 @@ STRINGS = {
             'cta_contact': 'تواصل معي',
             'available': 'متاح للعمل',
         },
-        'stats': {'years': 'سنوات بناء البرمجيات', 'projects': 'مشروع منجز', 'clients': 'عميل سعيد', 'repos': 'مستودع مفتوح المصدر'},
+        'stats': {'years': 'سنوات بناء البرمجيات', 'projects': 'مشروع منجز', 'repos': 'مستودع مفتوح المصدر'},
         'about': {
             'label': 'نبذة عني',
             'title': 'أحوّل المشكلات المعقدة إلى برمجيات أنيقة',

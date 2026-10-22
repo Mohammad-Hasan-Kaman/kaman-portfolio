@@ -35,9 +35,9 @@ class Profile(models.Model):
 
     summary_en = models.TextField(
         blank=True,
-        default='Highly motivated and self-taught developer with a strong foundation in Python and JavaScript. '
-                'Experienced in engineering custom AI-powered applications, backend automation tools and full-stack '
-                'web solutions, with a passion for solving algorithmic and system-level problems.')
+        default='Self-taught full-stack developer with 4 years of hands-on experience in Python, C# and JavaScript, '
+                'shipping production software from AI-powered desktop applications and LLM integrations to '
+                'Django platforms deployed on Linux VPS with nginx and gunicorn.')
     summary_fa = models.TextField(blank=True)
     summary_ar = models.TextField(blank=True)
 
@@ -49,8 +49,9 @@ class Profile(models.Model):
     core_competencies_ar = models.TextField(blank=True)
 
     years_experience = models.PositiveIntegerField(default=4)
-    projects_completed = models.PositiveIntegerField(default=15)
-    happy_clients = models.PositiveIntegerField(default=10)
+    projects_completed = models.PositiveIntegerField(default=12)
+    # Not used by any template yet — kept at 0 rather than inventing a client count.
+    happy_clients = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.name_en
