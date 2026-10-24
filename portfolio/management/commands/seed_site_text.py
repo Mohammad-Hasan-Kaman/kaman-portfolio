@@ -73,6 +73,20 @@ class Command(BaseCommand):
                 obj.save()
                 filled += 1
 
+        # Ensure testimonial heading and label reflect the real content (feedback,
+        # not client endorsements), overriding any prior admin edits.
+        for key in ('testimonials.title', 'testimonials.label'):
+            obj, _ = SiteText.objects.get_or_create(key=key)
+            if key == 'testimonials.title':
+                obj.value_en = 'Feedback & Collaborators'
+                obj.value_fa = 'بازخورد و همکاران'
+                obj.value_ar = 'آراء وتعاون'
+            elif key == 'testimonials.label':
+                obj.value_en = 'Feedback'
+                obj.value_fa = 'بازخورد'
+                obj.value_ar = 'آراء'
+            obj.save()
+
         tag_created = 0
         for i, tag in enumerate(MARQUEE_TAGS):
             _, was_created = MarqueeTag.objects.get_or_create(
