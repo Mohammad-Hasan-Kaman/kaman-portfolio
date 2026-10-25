@@ -15,7 +15,7 @@
 | Audience | How to use |
 |----------|------------|
 | **Visitors / clients** | Browse the live site — [mhkaman.com](https://mhkaman.com) — in EN, FA or AR. |
-| **Developers** | Clone, `pip install -r requirements.txt`, `python manage.py seed_data`, `runserver` — full local copy in under a minute. |
+| **Developers** | Clone, `pip install -r requirements.txt`, `python manage.py seed_data`, `runserver` — full local copy in under a minute. Media (`media/`) is committed to this repo so you have article covers, CV PDFs, and the profile photo out of the box. |
 
 ---
 
@@ -24,7 +24,7 @@
 - 🌐 **Trilingual by design:** EN / FA / AR with automatic **RTL layout** for Persian and Arabic — language-prefixed URLs (`/en/`, `/fa/`, `/ar/`), a navbar switcher, and English-first landing via `ForceEnglishDefaultMiddleware` (strips `Accept-Language` so first visits always land on `/en/`).
 - 🛠 **Fully admin-driven content:** `Profile`, `Project`, `Skill`, `Service`, `Testimonial`, `Experience`, `Education`, `CvLanguage`, `Article`, `ContactMessage` — plus `SiteText` (every UI string overridable from the admin with EN fallback) and `MarqueeTag` (hero tech-ticker labels).
 - 📁 **Project case-study pages:** slug URLs, tech-stack tags, live-demo + repo links, featured/ordered grid, "next project" navigation.
-- 📝 **Articles (blog):** trilingual body with EN fallback, emoji card icons, optional covers, publish toggle, detail pages at `/<lang>/articles/<slug>/`.
+- 📝 **Notes (blog):** trilingual body with EN fallback, emoji card icons, optional covers, publish toggle, detail pages at `/<lang>/articles/<slug>/`.
 - 📄 **Trilingual CV generator** (`portfolio/cv_pdf.py` + `cv_data.py`): single source of truth — PDFs in EN/FA/AR rendered with fpdf2, Vazirmatn + HarfBuzz shaping for FA/AR, downloadable per language (`/cv/download/?lang=fa`).
 - 📊 **Privacy-friendly analytics:** server-side only — pageviews, CV downloads, contact events, language switches. Salted IP hashes, anonymous `kp_vis` cookie, bot filtering, no third-party trackers. Admin dashboard at `templates/admin/portfolio/visit/dashboard.html`.
 - 🎨 **Modern animated UI:** floating gradient orbs, glassmorphism cards, bento project grid, typing effect, scroll-reveal, animated counters, tier-based skill labels (**no fake percentages** — `Skill.tier_label()` returns honest tier text).
@@ -77,7 +77,7 @@ Open <http://127.0.0.1:8000> (redirects to `/en/`).
 | `/en/` · `/fa/` · `/ar/` | The site in each language (FA/AR render RTL) |
 | `/en/cv/` | Resume page + per-language PDF download |
 | `/en/projects/<slug>/` | Project case-study page |
-| `/en/articles/<slug>/` | Article page |
+| `/en/articles/<slug>/` | Note page |
 | `/admin/` | Django admin — all content lives here |
 
 ### Production (how it runs on the VPS)
