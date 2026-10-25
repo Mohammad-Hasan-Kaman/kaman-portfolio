@@ -63,10 +63,16 @@ def project_detail(request, slug):
 
 
 def article_detail(request, slug):
+    import markdown
     article = get_object_or_404(Article, slug=slug, published=True)
     next_article = Article.objects.filter(published=True, id__gt=article.id).order_by('id').first()
     if next_article is None:
         next_article = Article.objects.filter(published=True).exclude(id=article.id).order_by('id').first()
+    # Pre-process markdown bodies
+    extensions = ['tables', 'fenced_code']
+    article.body_en_html = markdown.markdown(article.body_en, extensions=extensions)
+    article.body_fa_html = markdown.markdown(article.body_fa, extensions=extensions) if article.body_fa else ''
+    article.body_ar_html = markdown.markdown(article.body_ar, extensions=extensions) if article.body_ar else ''
     context = {
         'profile': get_profile(),
         'article': article,

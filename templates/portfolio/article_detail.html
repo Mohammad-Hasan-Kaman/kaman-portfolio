@@ -13,9 +13,9 @@
       <h1 class="detail-title">{{ article.icon }} {% tf article 'title' %}</h1>
       {% if article.cover %}<img class="article-hero-img" src="{{ article.cover.url }}" alt="{% tf article 'title' %}">{% endif %}
       <div class="article-content">
-        {% if LANG == 'fa' and article.body_fa %}{{ article.body_fa|linebreaks }}
-        {% elif LANG == 'ar' and article.body_ar %}{{ article.body_ar|linebreaks }}
-        {% else %}{{ article.body_en|linebreaks }}{% endif %}
+        {% if LANG == 'fa' and article.body_fa_html %}{{ article.body_fa_html|safe }}
+        {% elif LANG == 'ar' and article.body_ar_html %}{{ article.body_ar_html|safe }}
+        {% else %}{{ article.body_en_html|safe }}{% endif %}
       </div>
       <a href="{% url 'portfolio:home' %}#contact" class="btn btn-primary">{{ t.nav.contact }}</a>
     </div>
