@@ -1,3 +1,9 @@
+### 🌐 Telegram: [@mohaka_programmer](https://t.me/mohaka_programmer)
+
+[![Telegram](https://img.shields.io/badge/Telegram-%40mohaka__programmer-2CA5E0?logo=telegram&logoColor=white)](https://t.me/mohaka_programmer)
+
+---
+
 # 🌍 Kaman Portfolio — mhkaman.com
 
 > Trilingual personal portfolio (English / Persian / Arabic) for **Mohammad Hasan Kaman**, built with Django 5. Everything on the site — profile, projects, skills, services, testimonials, articles, even UI strings — is editable from the Django admin. Deployed live at **[mhkaman.com](https://mhkaman.com)**.
