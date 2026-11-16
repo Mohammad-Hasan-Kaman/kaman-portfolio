@@ -686,6 +686,11 @@ html[dir="rtl"] .next-project:hover .next-arrow { transform: scaleX(-1) translat
 }
 .exp-badge strong { font-size: 18px; color: var(--text); display: block; line-height: 1.2; }
 
+/* Chips/badges floating over the bright hero photo need a solid-enough
+   backdrop in dark mode: --card is 4% white there and washes the text out. */
+[data-theme="dark"] .floating-chip,
+[data-theme="dark"] .exp-badge { background: rgba(10, 13, 22, 0.78); }
+
 @media (max-width: 700px) {
   .chip-1 { top: -16px; inset-inline-start: 2px; }
   .chip-2 { top: -16px; inset-inline-end: 2px; }
