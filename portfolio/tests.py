@@ -155,7 +155,9 @@ class HomePageTests(SeededTestCase):
         for prefix in ('en', 'fa', 'ar'):
             response = self.client.get(f'/{prefix}/', secure=True)
             self.assertEqual(response.status_code, 200, prefix)
-            self.assertContains(response, 'data-count="12"')
+            # The ledger design renders all 12 projects as numbered entries
+            # (the old count-up stats widget was removed in the redesign).
+            self.assertEqual(response.content.decode('utf-8').count('data-category='), 12, prefix)
 
 class LlmsFilesTests(SeededTestCase):
     """The machine-readable files must describe the real database."""
