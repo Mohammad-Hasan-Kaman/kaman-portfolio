@@ -43,15 +43,15 @@
       <div class="hero-photo-wrap tilt">
         <div class="hero-photo-ring"></div>
         {% if profile.avatar %}<img class="hero-photo" src="{{ profile.avatar.url }}" alt="{% tf profile 'name' %}">
-        {% else %}<div class="hero-photo hero-photo-fallback">👨‍💻</div>{% endif %}
-        <div class="floating-chip chip-1">🐍 Python</div>
-        <div class="floating-chip chip-2">🤖 AI / LLM</div>
-        <div class="floating-chip chip-3">🎸 Django</div>
-        <div class="floating-chip chip-4">🎯 C#</div>
-        <div class="floating-chip chip-5">🖥️ Desktop</div>
-        <div class="floating-chip chip-6">🔐 Secure</div>
-        <div class="floating-chip chip-7">🚀 REST APIs</div>
-        <div class="floating-chip chip-8">🐧 Linux</div>
+        {% else %}<div class="hero-photo hero-photo-fallback"></div>{% endif %}
+        <div class="floating-chip chip-1">Python</div>
+        <div class="floating-chip chip-2">AI / LLM</div>
+        <div class="floating-chip chip-3">Django</div>
+        <div class="floating-chip chip-4">C#</div>
+        <div class="floating-chip chip-5">Desktop</div>
+        <div class="floating-chip chip-6">Secure</div>
+        <div class="floating-chip chip-7">REST APIs</div>
+        <div class="floating-chip chip-8">Linux</div>
         <div class="exp-badge"><strong>{{ profile.years_experience }}+</strong> {{ t.stats.years }}</div>
       </div>
     </div>
@@ -82,12 +82,12 @@
         </div>
         <h3>{% tf profile 'name' %}</h3>
         <p class="about-role accent">{% tf profile 'role' %}</p>
-        <p class="about-loc">📍 {{ t.misc.location }} {% tf profile 'location' %}</p>
+        <p class="about-loc">{{ t.misc.location }} {% tf profile 'location' %}</p>
         <div class="about-badges">
-          <span class="badge">🐍 Python</span>
-          <span class="badge">🎯 C#</span>
-          <span class="badge">🤖 AI / LLM</span>
-          <span class="badge">🔐 Security</span>
+          <span class="badge">Python</span>
+          <span class="badge">C#</span>
+          <span class="badge">AI / LLM</span>
+          <span class="badge">Security</span>
         </div>
       </div>
       <div class="about-text reveal">
@@ -95,7 +95,7 @@
         <p>{% tf profile 'tagline' %}</p>
         <div class="about-actions">
           <a href="{% url 'portfolio:cv' %}" class="btn btn-primary">{{ t.nav.cv }} →</a>
-          <a href="{% url 'portfolio:cv_download' %}?lang={{ LANG }}" class="btn btn-ghost" download>⬇ {{ t.about.download_cv }}</a>
+          <a href="{% url 'portfolio:cv_download' %}?lang={{ LANG }}" class="btn btn-ghost" download>{{ t.about.download_cv }}</a>
           <a href="{{ profile.github }}" target="_blank" rel="noopener" class="btn btn-ghost">GitHub →</a>
         </div>
 
@@ -113,7 +113,7 @@
         <span class="c-self">self</span>.passion = <span class="c-str">"shipping real products"</span>
 
     <span class="c-kw">def</span> <span class="c-fn">hire</span>(<span class="c-self">self</span>):
-        <span class="c-kw">return</span> <span class="c-bool">True</span>  <span class="c-cmt"># always 🚀</span></code></pre>
+        <span class="c-kw">return</span> <span class="c-bool">True</span>  <span class="c-cmt"># always</span></code></pre>
         </div>
       </div>
     </div>
@@ -132,7 +132,7 @@
       {% for skill in skills %}
       <div class="skill-card glass reveal" style="--d: {{ forloop.counter0 }}00ms">
         <div class="skill-head">
-          <span class="skill-icon">{{ skill.icon }}</span>
+          
           <span class="skill-name">{{ skill.name }}</span>
         </div>
         <span class="skill-tier">{% skill_label skill %}</span>
@@ -164,7 +164,7 @@
       <article class="project-card glass reveal {% if forloop.counter0 == 0 %}span-2{% endif %}" data-category="{{ project.category }}">
         <a href="{% url 'portfolio:project_detail' project.slug %}" class="project-cover cat-{{ project.category }}" aria-label="{% tf project 'title' %} — {{ t.projects.details }}">
           {% if project.image %}<img src="{{ project.image.url }}" alt="{% tf project 'title' %}">{% else %}
-          <span class="cover-icon">{{ project.icon }}</span>{% endif %}
+          {% endif %}
           {% if project.live_url %}<span class="live-pill">● LIVE</span>{% endif %}
         </a>
         <div class="project-body">
@@ -188,7 +188,7 @@
     <div class="mini-projects">
       {% for project in other_projects %}
       <a href="{% url 'portfolio:project_detail' project.slug %}" class="mini-card glass reveal" data-category="{{ project.category }}">
-        <span class="mini-icon">{{ project.icon }}</span>
+        
         <div>
           <h4>{% tf project 'title' %}</h4>
           <p>{{ project.description_en|truncatewords:14 }}</p>
@@ -217,7 +217,7 @@
       <article class="article-card glass reveal" style="--d: {{ forloop.counter0 }}00ms">
         <a href="{% url 'portfolio:article_detail' article.slug %}" class="article-cover" aria-hidden="true" tabindex="-1">
           {% if article.cover %}<img src="{{ article.cover.url }}" alt="{% tf article 'title' %}">{% else %}
-          <span class="cover-icon">{{ article.icon }}</span>{% endif %}
+          {% endif %}
         </a>
         <div class="article-body">
           <span class="article-date">📅 {% if LANG == 'fa' %}{{ article.created_at|date:"Y/m/d" }}{% else %}{{ article.created_at|date:"d M Y" }}{% endif %}</span>
@@ -245,7 +245,7 @@
     <div class="services-grid">
       {% for service in services %}
       <div class="service-card glass reveal" style="--d: {{ forloop.counter0 }}00ms">
-        <div class="service-icon">{{ service.icon }}</div>
+        
         <h3>{% tf service 'title' %}</h3>
         <p>{% tf service 'description' %}</p>
       </div>
@@ -290,19 +290,19 @@
     <div class="contact-grid">
       <div class="contact-info reveal">
         <a class="contact-row glass" href="mailto:{{ profile.email }}">
-          <span class="contact-icon">📧</span>
+          
           <div><strong>Email</strong><span>{{ profile.email }}</span></div>
         </a>
         <a class="contact-row glass" href="{{ profile.telegram }}" target="_blank" rel="noopener">
-          <span class="contact-icon">✈️</span>
+          
           <div><strong>Telegram</strong><span>@mohaka0975</span></div>
         </a>
         <a class="contact-row glass" href="{{ profile.linkedin }}" target="_blank" rel="noopener">
-          <span class="contact-icon">💼</span>
+          
           <div><strong>LinkedIn</strong><span>in/kaman-programmer</span></div>
         </a>
         <a class="contact-row glass" href="{{ profile.github }}" target="_blank" rel="noopener">
-          <span class="contact-icon">🐙</span>
+          
           <div><strong>GitHub</strong><span>@Mohammad-Hasan-Kaman</span></div>
         </a>
       </div>
@@ -319,7 +319,7 @@
         </div>
         <input type="text" name="subject" placeholder="{{ t.contact.subject }}" required>
         <textarea name="message" rows="5" placeholder="{{ t.contact.message }}" required></textarea>
-        <button type="submit" class="btn btn-primary btn-full" id="sendBtn">{{ t.contact.send }} 🚀</button>
+        <button type="submit" class="btn btn-primary btn-full" id="sendBtn">{{ t.contact.send }}</button>
         <p class="form-msg" id="formMsg"></p>
       </form>
     </div>

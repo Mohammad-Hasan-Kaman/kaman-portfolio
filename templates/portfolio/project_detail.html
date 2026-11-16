@@ -11,7 +11,7 @@
     <div class="detail-hero reveal">
       <div class="project-cover detail-cover cat-{{ project.category }}">
         {% if project.image %}<img src="{{ project.image.url }}" alt="{% tf project 'title' %}">{% else %}
-        <span class="cover-icon big">{{ project.icon }}</span>{% endif %}
+        {% endif %}
         {% if project.live_url %}<span class="live-pill">● LIVE</span>{% endif %}
       </div>
       <div class="detail-info">
@@ -28,7 +28,7 @@
 
         <div class="detail-actions">
           {% if project.live_url %}<a href="{{ project.live_url }}" target="_blank" rel="noopener" class="btn btn-primary">{{ t.projects.live }} ↗</a>{% endif %}
-          {% if project.repo_url %}<a href="{{ project.repo_url }}" target="_blank" rel="noopener" class="btn btn-ghost">{{ t.projects.code }} ⭐</a>{% endif %}
+          {% if project.repo_url %}<a href="{{ project.repo_url }}" target="_blank" rel="noopener" class="btn btn-ghost">{{ t.projects.code }}</a>{% endif %}
           <a href="{% url 'portfolio:home' %}#contact" class="btn btn-ghost">{{ t.nav.contact }}</a>
         </div>
       </div>
@@ -38,7 +38,7 @@
     <a href="{% url 'portfolio:project_detail' next_project.slug %}" class="next-project glass reveal">
       <div>
         <span class="project-cat">{{ t.projects.next }}</span>
-        <h2>{{ next_project.icon }} {% tf next_project 'title' %}</h2>
+        <h2>{% tf next_project 'title' %}</h2>
       </div>
       <span class="next-arrow">→</span>
     </a>

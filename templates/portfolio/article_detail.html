@@ -10,7 +10,7 @@
 
     <div class="detail-info reveal">
       <span class="article-date">📅 {% if LANG == 'fa' %}{{ article.created_at|date:"Y/m/d" }}{% else %}{{ article.created_at|date:"d M Y" }}{% endif %}</span>
-      <h1 class="detail-title">{{ article.icon }} {% tf article 'title' %}</h1>
+      <h1 class="detail-title">{% tf article 'title' %}</h1>
       {% if article.cover %}<img class="article-hero-img" src="{{ article.cover.url }}" alt="{% tf article 'title' %}">{% endif %}
       <div class="article-content">
         {% if LANG == 'fa' and article.body_fa_html %}{{ article.body_fa_html|safe }}
@@ -24,7 +24,7 @@
     <a href="{% url 'portfolio:article_detail' next_article.slug %}" class="next-project glass reveal">
       <div>
         <span class="project-cat">{{ t.articles.next }}</span>
-        <h2>{{ next_article.icon }} {% tf next_article 'title' %}</h2>
+        <h2>{% tf next_article 'title' %}</h2>
       </div>
       <span class="next-arrow">→</span>
     </a>

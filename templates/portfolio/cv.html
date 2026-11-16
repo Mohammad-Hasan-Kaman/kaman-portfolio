@@ -11,14 +11,14 @@
     <div class="cv-head glass reveal">
       <div class="cv-avatar">
         {% if profile.avatar %}<img src="{{ profile.avatar.url }}" alt="{% tf profile 'name' %}">{% else %}
-        <div class="avatar-fallback">👨‍💻</div>{% endif %}
+        <div class="avatar-fallback"></div>{% endif %}
       </div>
       <div class="cv-head-info">
         <h1>{% tf profile 'name' %}</h1>
         <p class="about-role accent">{% tf profile 'role' %}</p>
-        <p class="about-loc">📍 {{ t.misc.location }} {% tf profile 'location' %} · 📧 {{ profile.email }}</p>
+        <p class="about-loc">{{ t.misc.location }} {% tf profile 'location' %} · {{ profile.email }}</p>
         <div class="cv-head-actions">
-          <a href="{% url 'portfolio:cv_download' %}?lang={{ LANG }}" class="btn btn-primary" download>⬇ {{ t.cv.download }}</a>
+          <a href="{% url 'portfolio:cv_download' %}?lang={{ LANG }}" class="btn btn-primary" download>{{ t.cv.download }}</a>
           <a href="{% url 'portfolio:home' %}#contact" class="btn btn-ghost">{{ t.nav.contact }}</a>
         </div>
       </div>
@@ -66,7 +66,7 @@
       <div class="cv-skills">
         {% for skill in skills %}
         <div class="cv-skill">
-          <span class="cv-skill-name">{{ skill.icon }} {{ skill.name }}</span>
+          <span class="cv-skill-name">{{ skill.name }}</span>
           <span class="cv-skill-tier">{% skill_label skill %}</span>
         </div>
         {% endfor %}
@@ -79,7 +79,7 @@
       <ul class="cv-projects">
         {% for project in projects %}
         <li>
-          <span class="mini-icon">{{ project.icon }}</span>
+          
           <div>
             <strong>{% tf project 'title' %}</strong>
             <span class="cv-proj-tech">{{ project.tech_stack }}</span>
@@ -128,10 +128,10 @@
     <div class="cv-section glass reveal">
       <h2>{{ t.cv.contact }}</h2>
       <div class="cv-contact-grid">
-        <a class="contact-row" href="mailto:{{ profile.email }}"><span class="contact-icon">📧</span><div><strong>Email</strong><span>{{ profile.email }}</span></div></a>
-        <a class="contact-row" href="{{ profile.telegram }}" target="_blank" rel="noopener"><span class="contact-icon">✈️</span><div><strong>Telegram</strong><span>@mohaka0975</span></div></a>
-        <a class="contact-row" href="{{ profile.linkedin }}" target="_blank" rel="noopener"><span class="contact-icon">💼</span><div><strong>LinkedIn</strong><span>in/kaman-programmer</span></div></a>
-        <a class="contact-row" href="{{ profile.github }}" target="_blank" rel="noopener"><span class="contact-icon">🐙</span><div><strong>GitHub</strong><span>@Mohammad-Hasan-Kaman</span></div></a>
+        <a class="contact-row" href="mailto:{{ profile.email }}"><div><strong>Email</strong><span>{{ profile.email }}</span></div></a>
+        <a class="contact-row" href="{{ profile.telegram }}" target="_blank" rel="noopener"><div><strong>Telegram</strong><span>@mohaka0975</span></div></a>
+        <a class="contact-row" href="{{ profile.linkedin }}" target="_blank" rel="noopener"><div><strong>LinkedIn</strong><span>in/kaman-programmer</span></div></a>
+        <a class="contact-row" href="{{ profile.github }}" target="_blank" rel="noopener"><div><strong>GitHub</strong><span>@Mohammad-Hasan-Kaman</span></div></a>
         <a class="contact-row" href="{{ profile.twitter }}" target="_blank" rel="noopener"><span class="contact-icon">✖️</span><div><strong>X (Twitter)</strong><span>@kaman_hasan0975</span></div></a>
       </div>
     </div>

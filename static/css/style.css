@@ -3,40 +3,41 @@
    ================================================================ */
 
 :root, [data-theme="dark"] {
-  --bg: #07080f;
-  --bg-soft: #0d0f1a;
-  --card: rgba(255, 255, 255, 0.04);
-  --card-border: rgba(255, 255, 255, 0.09);
-  --card-hover: rgba(255, 255, 255, 0.07);
-  --text: #e8eaf6;
-  --text-soft: #9aa0b8;
-  --accent: #9b85ff;
-  --accent-2: #00d4ff;
-  --accent-3: #ff5c8a;
-  --gradient: linear-gradient(135deg, #7c5cff 0%, #00d4ff 50%, #ff5c8a 100%);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
-  --nav-bg: rgba(7, 8, 15, 0.75);
-  --orb-opacity: 0.35;
-  --grid-color: rgba(255, 255, 255, 0.03);
-  --code-bg: #0a0c16;
+  --bg: #0a0b0d;
+  --bg-soft: #101216;
+  --card: #121419;
+  --card-border: #23262d;
+  --card-hover: #171a20;
+  --text: #eceef1;
+  --text-soft: #9ba1a9;
+  --accent: #6ea8fe;
+  --accent-2: #6ea8fe;
+  --accent-3: #6ea8fe;
+  --gradient: #2563eb;
+  --glass-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --nav-bg: rgba(10, 11, 13, 0.88);
+  --orb-opacity: 0;
+  --grid-color: rgba(255, 255, 255, 0.025);
+  --code-bg: #0d0f12;
 }
 
 [data-theme="light"] {
-  --bg: #f4f5fb;
-  --bg-soft: #e9ebf5;
-  --card: rgba(255, 255, 255, 0.75);
-  --card-border: rgba(20, 24, 60, 0.1);
-  --card-hover: rgba(255, 255, 255, 0.95);
-  --text: #171a2e;
-  --text-soft: #5a6080;
-  --accent: #5a35f0;
-  --accent-2: #007a99;
-  --accent-3: #e64477;
-  --glass-shadow: 0 8px 32px rgba(30, 34, 90, 0.1);
-  --nav-bg: rgba(244, 245, 251, 0.8);
-  --orb-opacity: 0.22;
-  --grid-color: rgba(20, 24, 60, 0.04);
-  --code-bg: #171a2e;
+  --bg: #f7f7f5;
+  --bg-soft: #efefec;
+  --card: #ffffff;
+  --card-border: #e0e0da;
+  --card-hover: #fbfbfa;
+  --text: #1a1c1e;
+  --text-soft: #5c6167;
+  --accent: #1d4ed8;
+  --accent-2: #1d4ed8;
+  --accent-3: #1d4ed8;
+  --gradient: #1d4ed8;
+  --glass-shadow: 0 1px 3px rgba(20, 20, 20, 0.08);
+  --nav-bg: rgba(247, 247, 245, 0.9);
+  --orb-opacity: 0;
+  --grid-color: rgba(20, 20, 20, 0.035);
+  --code-bg: #17191c;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -121,7 +122,7 @@ img { max-width: 100%; height: auto; }
   width: 38px; height: 38px; border-radius: 11px;
   background: var(--gradient); color: #fff; font-size: 14px;
   font-weight: 800; letter-spacing: 0.5px;
-  box-shadow: 0 4px 18px rgba(124, 92, 255, 0.4);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
 }
 .logo-text { font-size: 19px; font-weight: 700; }
 
@@ -134,9 +135,9 @@ img { max-width: 100%; height: auto; }
 .nav-cta {
   color: #fff !important;
   background: var(--gradient) !important;
-  box-shadow: 0 4px 16px rgba(124, 92, 255, 0.35);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
-.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(124, 92, 255, 0.5); }
+.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); }
 
 .nav-controls { display: flex; align-items: center; gap: 10px; }
 
@@ -217,9 +218,9 @@ img { max-width: 100%; height: auto; }
 }
 .btn-primary {
   background: var(--gradient); color: #fff;
-  box-shadow: 0 6px 22px rgba(124, 92, 255, 0.4);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4);
 }
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 34px rgba(124, 92, 255, 0.55); }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 34px rgba(0, 0, 0, 0.55); }
 .btn-ghost {
   background: var(--card); color: var(--text);
   border: 1px solid var(--card-border);
@@ -342,12 +343,12 @@ html[dir="rtl"] .code-window { transform: perspective(900px) rotateY(6deg) rotat
   transition: 0.25s;
 }
 .filter-btn:hover { color: var(--text); border-color: var(--accent); }
-.filter-btn.active { background: var(--gradient); color: #fff; border-color: transparent; box-shadow: 0 4px 16px rgba(124, 92, 255, 0.35); }
+.filter-btn.active { background: var(--gradient); color: #fff; border-color: transparent; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35); }
 .filter-btn.active:hover { color: #fff; }
 
 .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .project-card { overflow: hidden; display: flex; flex-direction: column; transition: 0.35s; }
-.project-card:hover { transform: translateY(-8px); border-color: var(--accent); box-shadow: 0 20px 50px rgba(124, 92, 255, 0.18); }
+.project-card:hover { transform: translateY(-8px); border-color: var(--accent); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18); }
 .project-card.span-2 { grid-column: span 2; }
 .project-card.hidden { display: none; }
 
@@ -356,10 +357,7 @@ html[dir="rtl"] .code-window { transform: perspective(900px) rotateY(6deg) rotat
   height: 180px; text-decoration: none; overflow: hidden;
 }
 .project-card.span-2 .project-cover { height: 240px; }
-.cat-ai { background: linear-gradient(135deg, rgba(124, 92, 255, 0.25), rgba(0, 212, 255, 0.18)); }
-.cat-web { background: linear-gradient(135deg, rgba(0, 212, 255, 0.22), rgba(46, 230, 168, 0.16)); }
-.cat-security { background: linear-gradient(135deg, rgba(255, 92, 138, 0.22), rgba(124, 92, 255, 0.18)); }
-.cat-desktop { background: linear-gradient(135deg, rgba(255, 193, 7, 0.18), rgba(255, 92, 138, 0.14)); }
+.cat-ai, .cat-web, .cat-security, .cat-desktop { background: var(--bg-soft); }
 .cover-icon { font-size: 62px; filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.35)); transition: 0.4s; }
 .cover-icon.big { font-size: 96px; }
 .project-cover:hover .cover-icon { transform: scale(1.15) rotate(-6deg); }
@@ -453,7 +451,7 @@ html[dir="rtl"] .contact-row span { text-align: end; }
 }
 .contact-form input:focus, .contact-form textarea:focus {
   outline: none; border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
 }
 .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--text-soft); }
 .form-msg { text-align: center; font-size: 14px; font-weight: 600; min-height: 1.4em; }
@@ -637,18 +635,14 @@ html[dir="rtl"] .next-project:hover .next-arrow { transform: scaleX(-1) translat
    V2 UPGRADES — logo, photo hero, marquee, confidential section
    ================================================================ */
 
-.logo-img { width: 40px; height: 40px; border-radius: 11px; box-shadow: 0 4px 18px rgba(124, 92, 255, 0.4); }
+.logo-img { width: 40px; height: 40px; border-radius: 11px; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4); }
 
 /* ---------------- Hero photo ---------------- */
 .hero-photo-wrap { position: relative; width: min(300px, 74%); margin: 0 auto; aspect-ratio: 1; }
 .hero-photo-ring {
   position: absolute; inset: -8px; border-radius: 34px;
-  background: conic-gradient(from var(--ring-angle, 0deg), var(--accent), var(--accent-2), var(--accent-3), var(--accent));
-  animation: spin-ring 6s linear infinite;
-  filter: blur(1px);
+  background: var(--card-border);
 }
-@property --ring-angle { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
-@keyframes spin-ring { to { --ring-angle: 360deg; } }
 .hero-photo {
   position: absolute; inset: 0; width: 100%; height: 100%;
   border-radius: 28px; object-fit: cover; object-position: center 20%;
@@ -659,10 +653,11 @@ html[dir="rtl"] .next-project:hover .next-arrow { transform: scaleX(-1) translat
 
 /* Floating chips — 8 slots around the photo, never overlapping each other or the face */
 .floating-chip {
+  direction: ltr;
   position: absolute; padding: 9px 16px; border-radius: 12px;
   background: var(--card); border: 1px solid var(--card-border);
   backdrop-filter: blur(10px); font-size: 13px; font-weight: 700;
-  box-shadow: var(--glass-shadow); animation: bob 4s ease-in-out infinite;
+  box-shadow: var(--glass-shadow);
   white-space: nowrap; z-index: 2;
 }
 .chip-1 { top: -4px;    inset-inline-start: -104px; }
@@ -681,15 +676,10 @@ html[dir="rtl"] .next-project:hover .next-arrow { transform: scaleX(-1) translat
   padding: 9px 16px; border-radius: 14px;
   background: var(--card); border: 1px solid var(--card-border);
   backdrop-filter: blur(12px); box-shadow: var(--glass-shadow);
-  font-size: 12px; color: var(--text-soft); animation: bob 4s ease-in-out infinite;
-  animation-delay: -2.8s; z-index: 3;
+  font-size: 12px; color: var(--text-soft);
+  z-index: 3;
 }
 .exp-badge strong { font-size: 18px; color: var(--text); display: block; line-height: 1.2; }
-
-/* Chips/badges floating over the bright hero photo need a solid-enough
-   backdrop in dark mode: --card is 4% white there and washes the text out. */
-[data-theme="dark"] .floating-chip,
-[data-theme="dark"] .exp-badge { background: rgba(10, 13, 22, 0.78); }
 
 @media (max-width: 700px) {
   .chip-1 { top: -16px; inset-inline-start: 2px; }
@@ -710,46 +700,20 @@ html[dir="rtl"] .next-project:hover .next-arrow { transform: scaleX(-1) translat
   position: fixed; top: 0; left: 0; height: 3px; width: 0%;
   background: var(--gradient); z-index: 300;
   border-radius: 0 3px 3px 0;
-  box-shadow: 0 0 12px rgba(124, 92, 255, 0.7);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
   transition: width 0.08s linear;
 }
 
-/* Animated shimmer on the hero name */
-.hero-name {
-  background: linear-gradient(90deg, var(--text) 0%, var(--accent) 25%, var(--accent-2) 50%, var(--accent) 75%, var(--text) 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 7s linear infinite;
-}
-@keyframes shimmer { to { background-position: 200% center; } }
+/* Hero name: solid text, no animated gradient shimmer */
+.hero-name { color: var(--text); }
 
-/* Soft glow pulse on primary buttons */
-.btn-primary { animation: glow-pulse 3.2s ease-in-out infinite; }
-@keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 6px 22px rgba(124, 92, 255, 0.4); }
-  50% { box-shadow: 0 6px 38px rgba(124, 92, 255, 0.65); }
-}
-
-/* Sheen sweep across cards on hover */
-.project-card, .article-card, .service-card { position: relative; overflow: hidden; }
-.project-card::before, .article-card::before, .service-card::before {
-  content: ''; position: absolute; top: 0; left: -80%;
-  width: 55%; height: 100%; pointer-events: none; z-index: 1;
-  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.10), transparent);
-  transform: skewX(-20deg);
-}
-.project-card:hover::before, .article-card:hover::before, .service-card:hover::before {
-  animation: sheen 0.9s ease;
-}
-@keyframes sheen { to { left: 140%; } }
 
 /* Logo spin on hover */
 .logo:hover .logo-img { transform: rotate(10deg) scale(1.06); }
 .logo-img { transition: transform 0.35s ease; }
 
 /* Gentle floating for service icons */
-.service-icon { animation: bob 5s ease-in-out infinite; }
+.service-icon { }
 
 /* Cursor-follow tilt (JS adds transform) */
 .tilt { transition: transform 0.25s ease; will-change: transform; }
@@ -865,11 +829,11 @@ html[dir="rtl"] .about-code { transform: none; }
 /* ---------------- Articles ---------------- */
 .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .article-card { overflow: hidden; display: flex; flex-direction: column; transition: 0.35s; }
-.article-card:hover { transform: translateY(-8px); border-color: var(--accent); box-shadow: 0 20px 50px rgba(124, 92, 255, 0.18); }
+.article-card:hover { transform: translateY(-8px); border-color: var(--accent); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18); }
 .article-cover {
   position: relative; display: grid; place-items: center; height: 150px;
   text-decoration: none; overflow: hidden;
-  background: linear-gradient(135deg, rgba(124, 92, 255, 0.22), rgba(0, 212, 255, 0.16));
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.22), rgba(0, 212, 255, 0.16));
 }
 .article-cover img { width: 100%; height: 100%; object-fit: cover; }
 .article-cover .cover-icon { font-size: 52px; transition: 0.4s; }
