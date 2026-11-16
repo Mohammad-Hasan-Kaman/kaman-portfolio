@@ -30,10 +30,10 @@
 - 🌐 **Trilingual by design:** EN / FA / AR with automatic **RTL layout** for Persian and Arabic — language-prefixed URLs (`/en/`, `/fa/`, `/ar/`), a navbar switcher, and English-first landing via `ForceEnglishDefaultMiddleware` (strips `Accept-Language` so first visits always land on `/en/`).
 - 🛠 **Fully admin-driven content:** `Profile`, `Project`, `Skill`, `Service`, `Testimonial`, `Experience`, `Education`, `CvLanguage`, `Article`, `ContactMessage` — plus `SiteText` (every UI string overridable from the admin with EN fallback) and `MarqueeTag` (hero tech-ticker labels).
 - 📁 **Project case-study pages:** slug URLs, tech-stack tags, live-demo + repo links, featured/ordered grid, "next project" navigation.
-- 📝 **Notes (blog):** trilingual body with EN fallback, emoji card icons, optional covers, publish toggle, detail pages at `/<lang>/articles/<slug>/`.
+- 📝 **Notes (blog):** trilingual body with EN fallback, optional covers, publish toggle, detail pages at `/<lang>/articles/<slug>/`.
 - 📄 **Trilingual CV generator** (`portfolio/cv_pdf.py` + `cv_data.py`): single source of truth — PDFs in EN/FA/AR rendered with fpdf2, Vazirmatn + HarfBuzz shaping for FA/AR, downloadable per language (`/cv/download/?lang=fa`).
 - 📊 **Privacy-friendly analytics:** server-side only — pageviews, CV downloads, contact events, language switches. Salted IP hashes, anonymous `kp_vis` cookie, bot filtering, no third-party trackers. Admin dashboard at `templates/admin/portfolio/visit/dashboard.html`.
-- 🎨 **Modern animated UI:** floating gradient orbs, glassmorphism cards, bento project grid, typing effect, scroll-reveal, animated counters, tier-based skill labels (**no fake percentages** — `Skill.tier_label()` returns honest tier text).
+- 🎨 **Clean, content-first UI:** solid surfaces with a single accent color (no gradients or glass effects), bento project grid, typing effect, scroll-reveal, animated counters, tier-based skill labels (**no fake percentages** — `Skill.tier_label()` returns honest tier text).
 - 🌙 **Dark & light themes:** animated toggle, persisted in localStorage, applied before first paint.
 - ✉️ **AJAX contact form** (`contact_submit`): stored in DB, shown in admin, optional email notifications.
 - 🔍 **SEO built in:** Django sitemap (static/projects/articles × 3 languages), `static/robots.txt`, `static/llms.txt` + `llms-full.txt`.
@@ -155,7 +155,7 @@ kaman-portfolio/
 └── manage.py
 ```
 
-> `db.sqlite3`, `media/` and `staticfiles/` are git-ignored — they exist only on the server.
+> `db.sqlite3` and `staticfiles/` are git-ignored (they exist only on the server); `media/` is committed, so a fresh clone runs with the real covers, CV PDFs and profile photo.
 
 ---
 
@@ -173,4 +173,4 @@ If you find this project useful, please give it a **⭐ star**!
 
 ---
 
-*Maintained by Mohammad Hasan Kaman · Live at [mhkaman.com](https://mhkaman.com) · Last updated: October 2026*
+*Maintained by Mohammad Hasan Kaman · Live at [mhkaman.com](https://mhkaman.com) · Last updated: November 2026*
