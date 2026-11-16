@@ -13,7 +13,7 @@
   <div class="wrap narrow">
     <a class="back-link" href="{% url 'portfolio:home' %}#notes">← {{ t.articles.back }}</a>
 
-    <p class="d-cat">{% if LANG == 'fa' %}{{ article.created_at|jalali }}{% else %}{{ article.created_at|date:"d M Y" }}{% endif %}</p>
+    <p class="d-cat">{% if LANG == 'fa' %}{{ article.created_at|date:"Y/m/d" }}{% else %}{{ article.created_at|date:"d M Y" }}{% endif %}</p>
     <h1 class="d-title">{% tf article 'title' %}</h1>
 
     {% if article.cover %}<img class="d-shot" src="{{ article.cover.url }}" alt="{% tf article 'title' %}">{% endif %}

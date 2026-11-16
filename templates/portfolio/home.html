@@ -153,7 +153,7 @@
     <p class="sec-sub">{{ t.articles.title }}. {{ t.articles.subtitle }}</p>
     {% for article in articles %}
     <article class="note-row">
-      <time datetime="{{ article.created_at|date:'Y-m-d' }}">{% if LANG == 'fa' %}{{ article.created_at|jalali }}{% else %}{{ article.created_at|date:"d M Y" }}{% endif %}</time>
+      <time datetime="{{ article.created_at|date:'Y-m-d' }}">{% if LANG == 'fa' %}{{ article.created_at|date:"Y/m/d" }}{% else %}{{ article.created_at|date:"d M Y" }}{% endif %}</time>
       <div>
         <h3><a href="{% url 'portfolio:article_detail' article.slug %}">{% tf article 'title' %}</a></h3>
         <p>{% tf article 'excerpt' %}</p>

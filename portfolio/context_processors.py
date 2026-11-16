@@ -1,5 +1,5 @@
 from .translations import STRINGS
-from .models import SiteText, Profile
+from .models import SiteText
 from django.conf import settings
 
 
@@ -22,9 +22,6 @@ def site_context(request):
         node[parts[-1]] = value
 
     return {
-        # Error pages (404/500) render without a view, so the profile
-        # must come from here or header/footer lose all branding.
-        'profile': Profile.objects.first(),
         't': base,
         'LANG': lang,
         'DIR': STRINGS[lang]['dir'],
