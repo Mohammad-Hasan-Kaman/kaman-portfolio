@@ -748,6 +748,8 @@ html[dir="rtl"] .next-project:hover .next-arrow { transform: scaleX(-1) translat
 .cv-section > p { color: var(--text-soft); font-size: 16px; }
 
 .cv-skills { display: grid; grid-template-columns: 1fr 1fr; gap: 13px 28px; }
+.cv-core-competencies { list-style: disc; padding-inline-start: 22px; display: grid; gap: 4px; }
+.cv-core-competencies li::marker { color: var(--accent); }
 .cv-skill { display: flex; align-items: center; gap: 12px; }
 .cv-skill-name { flex: 0 0 auto; width: 44%; font-size: 13.5px; font-weight: 600; }
 .cv-skill-tier {
