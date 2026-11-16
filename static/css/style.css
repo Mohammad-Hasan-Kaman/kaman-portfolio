@@ -456,7 +456,9 @@ html[dir="rtl"] .contact-row span { text-align: end; }
 .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--text-soft); }
 .form-msg { text-align: center; font-size: 14px; font-weight: 600; min-height: 1.4em; }
 .form-msg.ok { color: #2ee6a8; }
-.form-msg.err { color: var(--accent-3); }
+[data-theme="light"] .form-msg.ok { color: #0a7a55; }
+.form-msg.err { color: #ff8585; }
+[data-theme="light"] .form-msg.err { color: #b3261e; }
 
 /* ---------------- Project detail ---------------- */
 .project-detail { padding-top: 130px; }
