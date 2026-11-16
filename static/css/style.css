@@ -127,7 +127,7 @@ input, textarea { cursor: text; }
 .facts dl { margin: 0; }
 .facts .fact { display: grid; grid-template-columns: 92px 1fr; gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--line-soft); }
 .facts dt { font-family: var(--mono); font-size: 0.82rem; color: var(--ink-3); padding-top: 3px; }
-.facts dd { margin: 0; font-size: 0.98rem; overflow-wrap: anywhere; }
+.facts dd { margin: 0; font-size: 0.98rem; }
 .facts dd a { color: var(--ink); }
 
 /* Sections */
@@ -247,10 +247,7 @@ form input:focus, form textarea:focus { border-color: var(--accent); outline: 2p
 /* Responsive */
 @media (max-width: 860px) {
   .hero { padding: 56px 0 48px; }
-  .hero h1 { font-size: 2.15rem; }
-  .hero-grid { grid-template-columns: minmax(0, 1fr); }
   .hero-grid, .about-grid, .contact-grid, .flagship .f-cols { grid-template-columns: 1fr; gap: 36px; }
-  .hero-grid { grid-template-columns: minmax(0, 1fr); }
   .skills-list { grid-template-columns: 1fr; }
   .service-row { grid-template-columns: 36px 1fr; }
   .service-row p { grid-column: 2; }
