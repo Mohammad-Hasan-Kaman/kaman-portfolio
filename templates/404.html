@@ -1,21 +1,20 @@
 {% extends 'base.html' %}
-{% load static portfolio_extras %}
-{% block title %}404 — {% tf profile 'name' %}{% endblock %}
+{% block title %}404 — Page not found{% endblock %}
 {% block content %}
-<section class="section notfound">
-  <div class="wrap narrow">
-    <p class="nf-code">404</p>
+<section class="notfound" style="min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center">
+  <div class="container">
+    <h1 style="font-size:clamp(4rem,14vw,9rem);line-height:1;margin:0" class="accent">404</h1>
     {% if LANG == 'fa' %}
-      <h1 class="d-title">این صفحه پیدا نشد.</h1>
-      <p class="nf-text">آدرس عوض شده یا هرگز وجود نداشته. از منوی بالا مسیر درست را انتخاب کن.</p>
+      <h2>این صفحه پیدا نشد.</h2>
+      <p style="opacity:.75">آدرس عوض شده یا هرگز وجود نداشته. از منوی بالا مسیر درست را انتخاب کن.</p>
       <a class="btn btn-primary" href="{% url 'portfolio:home' %}">بازگشت به خانه</a>
     {% elif LANG == 'ar' %}
-      <h1 class="d-title">لم يتم العثور على هذه الصفحة.</h1>
-      <p class="nf-text">العنوان تغيّر أو لم يكن موجودًا أبدًا. استخدم القائمة أعلاه للوصول إلى المكان الصحيح.</p>
+      <h2>لم يتم العثور على هذه الصفحة.</h2>
+      <p style="opacity:.75">العنوان تغيّر أو لم يكن موجودًا أبدًا. استخدم القائمة أعلاه للوصول إلى المكان الصحيح.</p>
       <a class="btn btn-primary" href="{% url 'portfolio:home' %}">العودة إلى الرئيسية</a>
     {% else %}
-      <h1 class="d-title">This page could not be found.</h1>
-      <p class="nf-text">The address may have changed or never existed. Use the menu above to find your way.</p>
+      <h2>This page could not be found.</h2>
+      <p style="opacity:.75">The address may have changed or never existed. Use the menu above to find your way.</p>
       <a class="btn btn-primary" href="{% url 'portfolio:home' %}">Back to home</a>
     {% endif %}
   </div>

@@ -2,36 +2,30 @@
 {% load static portfolio_extras %}
 
 {% block title %}{% tf article 'title' %} — {% tf profile 'name' %}{% endblock %}
-{% block meta_description %}{% tf article 'excerpt' %}{% endblock %}
-{% block og_title %}{% tf article 'title' %} — {% tf profile 'name' %}{% endblock %}
-{% block og_description %}{% tf article 'excerpt' %}{% endblock %}
-{% block tw_title %}{% tf article 'title' %} — {% tf profile 'name' %}{% endblock %}
-{% block tw_description %}{% tf article 'excerpt' %}{% endblock %}
 
 {% block content %}
-<section class="section detail">
-  <div class="wrap narrow">
-    <a class="back-link" href="{% url 'portfolio:home' %}#notes">← {{ t.articles.back }}</a>
+<section class="section article-detail">
+  <div class="container article-container">
+    <a href="{% url 'portfolio:home' %}#articles" class="back-link reveal">← {{ t.articles.back }}</a>
 
-    <p class="d-cat">{% if LANG == 'fa' %}{{ article.created_at|date:"Y/m/d" }}{% else %}{{ article.created_at|date:"d M Y" }}{% endif %}</p>
-    <h1 class="d-title">{% tf article 'title' %}</h1>
-
-    {% if article.cover %}<img class="d-shot" src="{{ article.cover.url }}" alt="{% tf article 'title' %}">{% endif %}
-
-    <div class="article-body">
-      {% if LANG == 'fa' and article.body_fa_html %}{{ article.body_fa_html|safe }}
-      {% elif LANG == 'ar' and article.body_ar_html %}{{ article.body_ar_html|safe }}
-      {% else %}{{ article.body_en_html|safe }}{% endif %}
-    </div>
-
-    <div class="detail-actions">
-      <a class="btn btn-primary" href="{% url 'portfolio:home' %}#contact">{{ t.nav.contact }}</a>
+    <div class="detail-info reveal">
+      <span class="article-date">📅 {% if LANG == 'fa' %}{{ article.created_at|date:"Y/m/d" }}{% else %}{{ article.created_at|date:"d M Y" }}{% endif %}</span>
+      <h1 class="detail-title">{{ article.icon }} {% tf article 'title' %}</h1>
+      {% if article.cover %}<img class="article-hero-img" src="{{ article.cover.url }}" alt="{% tf article 'title' %}">{% endif %}
+      <div class="article-content">
+        {% if LANG == 'fa' and article.body_fa_html %}{{ article.body_fa_html|safe }}
+        {% elif LANG == 'ar' and article.body_ar_html %}{{ article.body_ar_html|safe }}
+        {% else %}{{ article.body_en_html|safe }}{% endif %}
+      </div>
+      <a href="{% url 'portfolio:home' %}#contact" class="btn btn-primary">{{ t.nav.contact }}</a>
     </div>
 
     {% if next_article %}
-    <a class="next-card" href="{% url 'portfolio:article_detail' next_article.slug %}">
-      <span class="next-label">{{ t.articles.next }}</span>
-      <span class="next-title">{% tf next_article 'title' %}</span>
+    <a href="{% url 'portfolio:article_detail' next_article.slug %}" class="next-project glass reveal">
+      <div>
+        <span class="project-cat">{{ t.articles.next }}</span>
+        <h2>{{ next_article.icon }} {% tf next_article 'title' %}</h2>
+      </div>
       <span class="next-arrow">→</span>
     </a>
     {% endif %}
