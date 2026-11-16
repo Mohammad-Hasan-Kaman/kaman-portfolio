@@ -156,7 +156,6 @@
       <button class="filter-btn" data-filter="ai">{{ t.projects.ai }}</button>
       <button class="filter-btn" data-filter="web">{{ t.projects.web }}</button>
       <button class="filter-btn" data-filter="security">{{ t.projects.security }}</button>
-      <button class="filter-btn" data-filter="desktop">{{ t.projects.desktop }}</button>
     </div>
 
     <div class="projects-grid" id="projectsGrid">
@@ -170,7 +169,7 @@
         <div class="project-body">
           <span class="project-cat">{% category_name project.category t %}</span>
           <h3 class="project-title">{% tf project 'title' %}</h3>
-          <p class="project-desc">{{ project.description_en|truncatewords:28 }}</p>
+          <p class="project-desc">{% tf project 'description' as proj_desc %}{{ proj_desc|truncatewords:28 }}</p>
           <div class="project-tech">
             {% for tech in project.tech_stack|techs|slice:":4" %}<span>{{ tech }}</span>{% endfor %}
           </div>
@@ -191,7 +190,7 @@
         
         <div>
           <h4>{% tf project 'title' %}</h4>
-          <p>{{ project.description_en|truncatewords:14 }}</p>
+          <p>{% tf project 'description' as proj_desc %}{{ proj_desc|truncatewords:14 }}</p>
           <div class="project-tech">
             {% for tech in project.tech_stack|techs|slice:":3" %}<span>{{ tech }}</span>{% endfor %}
           </div>
