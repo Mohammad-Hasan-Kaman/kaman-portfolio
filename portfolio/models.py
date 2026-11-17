@@ -4,8 +4,8 @@ from django.db import models
 class Profile(models.Model):
     """Single-row profile model — editable from the Django admin."""
     name_en = models.CharField(max_length=120, default='Mohammad Hasan Kaman')
-    name_fa = models.CharField(max_length=120, default='محمد حسن کَمَن')
-    name_ar = models.CharField(max_length=120, default='محمد حسن كَمَن')
+    name_fa = models.CharField(max_length=120, default='محمد حسن کمن')
+    name_ar = models.CharField(max_length=120, default='محمد حسن كمن')
 
     role_en = models.CharField(max_length=200, default='Full-Stack Developer')
     role_fa = models.CharField(max_length=200, default='توسعه‌دهنده فول‌استک')

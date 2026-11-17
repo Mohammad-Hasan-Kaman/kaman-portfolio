@@ -82,18 +82,7 @@ def article_detail(request, slug):
 
 
 def cv_page(request):
-    import os
-    from django.conf import settings
-
     profile = get_profile()
-    cv_pdf_url = None
-    if profile and profile.cv_file:
-        root, ext = os.path.splitext(profile.cv_file.name)
-        lang_pdf = f'{root}_{request.LANGUAGE_CODE}{ext}'
-        if os.path.exists(os.path.join(settings.MEDIA_ROOT, lang_pdf)):
-            cv_pdf_url = f'{settings.MEDIA_URL}{lang_pdf}'
-        else:
-            cv_pdf_url = profile.cv_file.url
     context = {
         'profile': profile,
         'skills': Skill.objects.all(),
@@ -101,7 +90,6 @@ def cv_page(request):
         'experiences': Experience.objects.all(),
         'educations': Education.objects.all(),
         'cv_languages': CvLanguage.objects.all(),
-        'cv_pdf_url': cv_pdf_url,
     }
     return render(request, 'portfolio/cv.html', context)
 

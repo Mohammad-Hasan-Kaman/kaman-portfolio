@@ -284,7 +284,7 @@ class CvContentTests(SeededTestCase):
 
     def test_every_project_shows_its_real_release(self):
         releases = [
-            'v3.0.0', 'v0.2.0', 'v1.0.0', 'v1.1.0', 'v7.0.1',
+            'v3.2.3', 'v0.2.2', 'v2.0.0', 'v1.0.0', 'v1.1.0', 'v7.0.1',
             'v10.0.0', 'v1.2.1',
         ]
         for lang in ('en', 'fa', 'ar'):
@@ -302,7 +302,7 @@ class CvContentTests(SeededTestCase):
 
     def test_verified_facts_are_present(self):
         en = str(self._data()['en'])
-        self.assertIn('303 offline tests', en)
+        self.assertIn('365 offline tests', en)
         self.assertIn('Twelve named checks', en)
         self.assertIn('Edge WebView2', en)
         self.assertIn('CustomTkinter', en)

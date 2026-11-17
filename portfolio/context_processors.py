@@ -1,5 +1,5 @@
 from .translations import STRINGS
-from .models import SiteText
+from .models import SiteText, Profile
 from django.conf import settings
 
 
@@ -25,6 +25,7 @@ def site_context(request):
         't': base,
         'LANG': lang,
         'DIR': STRINGS[lang]['dir'],
+        'profile': Profile.objects.first(),
         'SITE_DOMAIN': settings.SITE_DOMAIN,
         'LANGUAGES_LIST': [
             {'code': 'en', 'label': 'EN', 'name': 'English'},
