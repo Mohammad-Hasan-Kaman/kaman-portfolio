@@ -78,7 +78,7 @@
       <div class="about-card glass reveal">
         <div class="about-avatar">
           {% if profile.avatar %}<img src="{{ profile.avatar.url }}" alt="{% tf profile 'name' %}">{% else %}
-          <div class="avatar-fallback">👨‍💻</div>{% endif %}
+          <div class="avatar-fallback">MH</div>{% endif %}
         </div>
         <h3>{% tf profile 'name' %}</h3>
         <p class="about-role accent">{% tf profile 'role' %}</p>
@@ -164,7 +164,7 @@
         <a href="{% url 'portfolio:project_detail' project.slug %}" class="project-cover cat-{{ project.category }}" aria-label="{% tf project 'title' %} — {{ t.projects.details }}">
           {% if project.image %}<img src="{{ project.image.url }}" alt="{% tf project 'title' %}">{% else %}
           {% endif %}
-          {% if project.live_url %}<span class="live-pill">● LIVE</span>{% endif %}
+          {% if project.live_url %}<span class="live-pill">● {{ t.misc.live }}</span>{% endif %}
         </a>
         <div class="project-body">
           <span class="project-cat">{% category_name project.category t %}</span>
@@ -219,7 +219,7 @@
           {% endif %}
         </a>
         <div class="article-body">
-          <span class="article-date">📅 {% if LANG == 'fa' %}{{ article.created_at|date:"Y/m/d" }}{% else %}{{ article.created_at|date:"d M Y" }}{% endif %}</span>
+          <span class="article-date">{% if LANG == 'fa' %}{{ article.created_at|date:"Y/m/d" }}{% else %}{{ article.created_at|date:"d M Y" }}{% endif %}</span>
           <h3 class="project-title">{% tf article 'title' %}</h3>
           <p class="project-desc">{% tf article 'excerpt' %}</p>
           <a href="{% url 'portfolio:article_detail' article.slug %}" class="link-btn" aria-label="{% tf article 'title' %} — {{ t.articles.read_more }}">{{ t.articles.read_more }} →</a>
@@ -230,8 +230,6 @@
   </div>
 </section>
 {% endif %}
-
-<!-- ============ CONTACT ============ -->
 
 <!-- ============ SERVICES ============ -->
 <section class="section section-alt" id="services">

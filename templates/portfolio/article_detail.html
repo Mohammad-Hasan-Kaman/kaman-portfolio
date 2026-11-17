@@ -9,7 +9,7 @@
     <a href="{% url 'portfolio:home' %}#articles" class="back-link reveal">← {{ t.articles.back }}</a>
 
     <div class="detail-info reveal">
-      <span class="article-date">📅 {% if LANG == 'fa' %}{{ article.created_at|date:"Y/m/d" }}{% else %}{{ article.created_at|date:"d M Y" }}{% endif %}</span>
+      <span class="article-date">{% if LANG == 'fa' %}{{ article.created_at|date:"Y/m/d" }}{% else %}{{ article.created_at|date:"d M Y" }}{% endif %}</span>
       <h1 class="detail-title">{% tf article 'title' %}</h1>
       {% if article.cover %}<img class="article-hero-img" src="{{ article.cover.url }}" alt="{% tf article 'title' %}">{% endif %}
       <div class="article-content">

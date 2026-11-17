@@ -12,7 +12,7 @@
       <div class="project-cover detail-cover cat-{{ project.category }}">
         {% if project.image %}<img src="{{ project.image.url }}" alt="{% tf project 'title' %}">{% else %}
         {% endif %}
-        {% if project.live_url %}<span class="live-pill">● LIVE</span>{% endif %}
+        {% if project.live_url %}<span class="live-pill">● {{ t.misc.live }}</span>{% endif %}
       </div>
       <div class="detail-info">
         <span class="project-cat">{% category_name project.category t %}</span>
