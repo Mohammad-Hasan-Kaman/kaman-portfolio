@@ -16,7 +16,6 @@
   --gradient: #2563eb;
   --glass-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   --nav-bg: rgba(10, 11, 13, 0.88);
-  --orb-opacity: 0;
   --grid-color: rgba(255, 255, 255, 0.025);
   --code-bg: #0d0f12;
 }
@@ -35,7 +34,6 @@
   --gradient: #1d4ed8;
   --glass-shadow: 0 1px 3px rgba(20, 20, 20, 0.08);
   --nav-bg: rgba(247, 247, 245, 0.9);
-  --orb-opacity: 0;
   --grid-color: rgba(20, 20, 20, 0.035);
   --code-bg: #17191c;
 }
@@ -71,29 +69,12 @@ img { max-width: 100%; height: auto; }
   background: var(--card);
   border: 1px solid var(--card-border);
   border-radius: 18px;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
   box-shadow: var(--glass-shadow);
 }
 
 /* ---------------- Animated background ---------------- */
 .bg-fx { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
 
-.orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-  opacity: var(--orb-opacity);
-  animation: float 14s ease-in-out infinite alternate;
-}
-.orb-1 { width: 480px; height: 480px; background: var(--accent); top: -140px; inset-inline-start: -120px; }
-.orb-2 { width: 420px; height: 420px; background: var(--accent-2); top: 30%; inset-inline-end: -140px; animation-delay: -5s; }
-.orb-3 { width: 380px; height: 380px; background: var(--accent-3); bottom: -120px; inset-inline-start: 35%; animation-delay: -9s; }
-
-@keyframes float {
-  from { transform: translate(0, 0) scale(1); }
-  to { transform: translate(50px, 40px) scale(1.12); }
-}
 
 .grid-overlay {
   position: absolute; inset: 0;
@@ -324,7 +305,6 @@ html[dir="rtl"] .code-window { transform: perspective(900px) rotateY(6deg) rotat
 .skill-card { padding: 20px 22px; transition: 0.3s; }
 .skill-card:hover { transform: translateY(-4px); border-color: var(--accent); }
 .skill-head { display: flex; align-items: center; gap: 11px; }
-.skill-icon { font-size: 21px; }
 .skill-name { font-weight: 600; font-size: 14.5px; flex: 1; }
 .skill-tier {
   display: inline-block; margin-top: 12px; padding: 5px 12px; border-radius: 100px;
@@ -358,9 +338,6 @@ html[dir="rtl"] .code-window { transform: perspective(900px) rotateY(6deg) rotat
 }
 .project-card.span-2 .project-cover { height: 240px; }
 .cat-ai, .cat-web, .cat-security, .cat-desktop { background: var(--bg-soft); }
-.cover-icon { font-size: 62px; filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.35)); transition: 0.4s; }
-.cover-icon.big { font-size: 96px; }
-.project-cover:hover .cover-icon { transform: scale(1.15) rotate(-6deg); }
 .live-pill {
   position: absolute; top: 14px; inset-inline-end: 14px;
   padding: 4px 12px; border-radius: 100px;
@@ -406,11 +383,6 @@ html[dir="rtl"] .code-window { transform: perspective(900px) rotateY(6deg) rotat
 .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .service-card { padding: 30px 24px; transition: 0.3s; }
 .service-card:hover { transform: translateY(-6px); border-color: var(--accent); }
-.service-icon {
-  width: 56px; height: 56px; border-radius: 15px; display: grid; place-items: center;
-  font-size: 26px; background: var(--card); border: 1px solid var(--card-border);
-  margin-bottom: 18px;
-}
 .service-card h3 { font-size: 17.5px; font-weight: 700; margin-bottom: 9px; }
 .service-card p { color: var(--text-soft); font-size: 13.8px; }
 
@@ -658,26 +630,25 @@ html[dir="rtl"] .next-project:hover .next-arrow { transform: scaleX(-1) translat
   direction: ltr;
   position: absolute; padding: 9px 16px; border-radius: 12px;
   background: var(--card); border: 1px solid var(--card-border);
-  backdrop-filter: blur(10px); font-size: 13px; font-weight: 700;
+  font-size: 13px; font-weight: 700;
   box-shadow: var(--glass-shadow);
   white-space: nowrap; z-index: 2;
 }
 .chip-1 { top: -4px;    inset-inline-start: -104px; }
-.chip-2 { top: -4px;    inset-inline-end: -108px; animation-delay: -0.5s; }
-.chip-3 { bottom: -6px; inset-inline-start: -100px; animation-delay: -1s; }
-.chip-4 { top: -40px;   inset-inline-start: 16%; animation-delay: -1.5s; }
-.chip-5 { bottom: -44px; inset-inline-start: 20%; animation-delay: -2s; }
-.chip-6 { top: 38%;     inset-inline-end: -104px; animation-delay: -2.5s; }
-.chip-7 { top: 40%;     inset-inline-start: -108px; animation-delay: -3s; }
-.chip-8 { bottom: 30%;  inset-inline-end: -100px; animation-delay: -3.5s; }
-@keyframes bob { 50% { transform: translateY(-10px); } }
+.chip-2 { top: -4px;    inset-inline-end: -108px;; }
+.chip-3 { bottom: -6px; inset-inline-start: -100px;; }
+.chip-4 { top: -40px;   inset-inline-start: 16%;; }
+.chip-5 { bottom: -44px; inset-inline-start: 20%;; }
+.chip-6 { top: 38%;     inset-inline-end: -104px;; }
+.chip-7 { top: 40%;     inset-inline-start: -108px;; }
+.chip-8 { bottom: 30%;  inset-inline-end: -100px;; }
 
 /* Experience badge — bottom-right corner, clear of every chip */
 .exp-badge {
   position: absolute; bottom: -8px; inset-inline-end: -14px;
   padding: 9px 16px; border-radius: 14px;
   background: var(--card); border: 1px solid var(--card-border);
-  backdrop-filter: blur(12px); box-shadow: var(--glass-shadow);
+  box-shadow: var(--glass-shadow);
   font-size: 12px; color: var(--text-soft);
   z-index: 3;
 }
@@ -715,7 +686,6 @@ html[dir="rtl"] .next-project:hover .next-arrow { transform: scaleX(-1) translat
 .logo-img { transition: transform 0.35s ease; }
 
 /* Gentle floating for service icons */
-.service-icon { }
 
 /* Cursor-follow tilt (JS adds transform) */
 .tilt { transition: transform 0.25s ease; will-change: transform; }
@@ -837,11 +807,9 @@ html[dir="rtl"] .about-code { transform: none; }
 .article-cover {
   position: relative; display: grid; place-items: center; height: 150px;
   text-decoration: none; overflow: hidden;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.22), rgba(0, 212, 255, 0.16));
+  background: var(--bg-soft);
 }
 .article-cover img { width: 100%; height: 100%; object-fit: cover; }
-.article-cover .cover-icon { font-size: 52px; transition: 0.4s; }
-.article-cover:hover .cover-icon { transform: scale(1.15) rotate(-6deg); }
 .article-body { padding: 22px; display: flex; flex-direction: column; gap: 9px; flex: 1; }
 .article-date { font-size: 12px; color: var(--text-soft); font-family: 'JetBrains Mono', monospace; }
 
