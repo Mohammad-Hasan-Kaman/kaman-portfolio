@@ -51,21 +51,3 @@ def abs_lang_url(context, lang_code):
     path = translate_url(request.path, lang_code)
     return f'https://{settings.SITE_DOMAIN}{path}'
 
-
-@register.simple_tag
-def total_visits():
-    from .models import Visit
-    return Visit.objects.count()
-
-
-@register.simple_tag
-def unique_visitors():
-    from .models import Visit
-    return Visit.objects.values('session_key').distinct().count()
-
-
-@register.simple_tag
-def today_visits():
-    from django.utils import timezone
-    from .models import Visit
-    return Visit.objects.filter(created_at__gte=timezone.now().replace(hour=0, minute=0, second=0, microsecond=0)).count()
