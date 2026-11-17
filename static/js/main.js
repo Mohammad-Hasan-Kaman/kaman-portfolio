@@ -126,13 +126,13 @@
         const ctype = res.headers.get('content-type') || '';
         const data = ctype.includes('json')
           ? await res.json()
-          : { ok: false, msg: '⚠ جلسه منقضی شده — صفحه را یک بار رفرش کنید و دوباره بفرستید' };
+          : { ok: false, msg: (window.__msgs && window.__msgs.sessionExpired) || 'Session expired' };
         msg.textContent = data.msg;
         msg.classList.add(res.ok ? 'ok' : 'err');
         if (res.ok) form.reset();
       } catch {
         msg.className = 'form-msg err';
-        msg.textContent = '⚠ Network error';
+        msg.textContent = (window.__msgs && window.__msgs.networkError) || 'Network error';
       } finally {
         btn.disabled = false;
         btn.textContent = original;
@@ -151,7 +151,7 @@
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
 
-  /* ---------------- Cursor tilt + orb parallax (desktop only) ---------------- */
+  /* ---------------- Cursor tilt (desktop only) ---------------- */
   if (window.matchMedia('(hover: hover)').matches) {
     document.querySelectorAll('.tilt').forEach((el) => {
       el.addEventListener('mousemove', (e) => {
@@ -163,14 +163,5 @@
       el.addEventListener('mouseleave', () => { el.style.transform = ''; });
     });
 
-    const orbs = document.querySelectorAll('.orb');
-    window.addEventListener('mousemove', (e) => {
-      const dx = e.clientX / window.innerWidth - 0.5;
-      const dy = e.clientY / window.innerHeight - 0.5;
-      orbs.forEach((o, i) => {
-        const f = (i + 1) * 14;
-        o.style.translate = `${dx * f}px ${dy * f}px`;
-      });
-    });
   }
 })();
