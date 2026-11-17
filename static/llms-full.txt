@@ -50,13 +50,13 @@ Python, Django, C#, .NET, JavaScript, REST APIs, PyQt6, CustomTkinter, WinForms,
 ## Featured projects
 
 📚 Kaman AI Translator
-A PyQt6 desktop studio that translates whole PDF and EPUB books into fluent academic Persian — and back into English — one page at a time or an entire book unattended. Per-book structure templates keep terminology consistent, a QC review loop catches meaning drift, and API keys are encrypted with Windows DPAPI. 303 offline tests, Windows release v3.0.0.
+A PyQt6 desktop studio that translates whole PDF and EPUB books into fluent academic Persian — and back into English — one page at a time or an entire book unattended. Per-book structure templates keep terminology consistent, a QC review loop catches meaning drift, and API keys are encrypted with Windows DPAPI. 365 offline tests, Windows release v3.2.3.
 Python, PyQt6, Gemini / OpenAI-compatible APIs, SSE, DPAPI, PDF, EPUB
 Case study: https://mhkaman.com/en/projects/kaman-ai-translator/
 Source code: https://github.com/Mohammad-Hasan-Kaman/kaman-ai-translator
 
 🩺 Agent Stream Doctor
-A zero-dependency Python CLI that reads raw SSE chat-completion captures and explains exactly why an LLM stream returned nothing — reasoning-only responses, missing finish_reason, malformed SSE framing, truncated tool calls. Twelve named checks, an explainable report, JSON output for CI, usable as a library. Release v0.2.0.
+A zero-dependency Python CLI that reads raw SSE chat-completion captures and explains exactly why an LLM stream returned nothing — reasoning-only responses, missing finish_reason, malformed SSE framing, truncated tool calls. Twelve named checks, an explainable report, JSON output for CI, usable as a library. Release v0.2.2.
 Python, SSE, OpenAI-compatible APIs, CLI, JSON output
 Case study: https://mhkaman.com/en/projects/agent-stream-doctor/
 Source code: https://github.com/Mohammad-Hasan-Kaman/agent-stream-doctor
@@ -196,10 +196,10 @@ Network Infrastructure & Troubleshooting
 ## Professional Projects
 
 Kaman AI Translator — Whole-Book PDF & EPUB Translation — 2024 — 2026 — Freelance
-Commercial Python desktop application that translates academic and technical PDF/EPUB books into fluent Persian and back into English. Smart paragraph-level chunking with a rolling context tail, a per-book structure template for headings and recurring labels, a QC review loop, per-page job store with pause/resume across restarts, DPAPI-encrypted API keys and 303 offline tests. Windows executable, release v3.0.0.
+Commercial Python desktop application that translates academic and technical PDF/EPUB books into fluent Persian and back into English. Smart paragraph-level chunking with a rolling context tail, a per-book structure template for headings and recurring labels, a QC review loop, per-page job store with pause/resume across restarts, DPAPI-encrypted API keys and 365 offline tests. Windows executable, release v3.2.3.
 
 Agent Stream Doctor — LLM Streaming Diagnostics — 2025 — 2026 — Open Source
-Zero-dependency Python toolkit that diagnoses why an LLM stream returns nothing: reasoning-only responses, missing finish_reason, malformed SSE framing and truncated tool calls. Twelve named checks, a tolerant parser that turns every malformed deviation into a finding instead of an exception, JSON output for CI and a clean library API. Release v0.2.0.
+Zero-dependency Python toolkit that diagnoses why an LLM stream returns nothing: reasoning-only responses, missing finish_reason, malformed SSE framing and truncated tool calls. Twelve named checks, a tolerant parser that turns every malformed deviation into a finding instead of an exception, JSON output for CI and a clean library API. Release v0.2.2.
 
 AI Counseling Platform — Widget & Bale Bot — 2024 — Freelance
 Built an AI intake system for a counselling centre: a conversational Persian RTL widget and a Bale messenger bot, both running a 12-state guided interview, the GHQ-28 wellbeing screening, clinical concept extraction and a self-learning consultant-matching engine. Fully local — no hosted LLM, no per-message cost, no visitor data leaving the server. Running in production at kahaai.ir.
