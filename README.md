@@ -32,7 +32,7 @@
 - 📁 **Project case-study pages:** slug URLs, tech-stack tags, live-demo + repo links, featured/ordered grid, "next project" navigation.
 - 📝 **Notes (blog):** trilingual body with EN fallback, optional covers, publish toggle, detail pages at `/<lang>/articles/<slug>/`.
 - 📄 **Trilingual CV generator** (`portfolio/cv_pdf.py` + `cv_data.py`): single source of truth — PDFs in EN/FA/AR rendered with fpdf2, Vazirmatn + HarfBuzz shaping for FA/AR, downloadable per language (`/cv/download/?lang=fa`).
-- 📊 **Privacy-friendly analytics:** server-side only — pageviews, CV downloads, contact events, language switches. Salted IP hashes, anonymous `kp_vis` cookie, bot filtering, no third-party trackers. Admin dashboard at `templates/admin/portfolio/visit/dashboard.html`.
+- 📊 **Analytics:** privacy-friendly server-side analytics — pageviews, CV downloads, contact events, language switches. Salted IP hashes, anonymous `kp_vis` cookie, bot filtering; admin dashboard at `templates/admin/portfolio/visit/dashboard.html`. Google Analytics (gtag.js) also runs for aggregate traffic statistics.
 - 🎨 **Clean, content-first UI:** solid surfaces with a single accent color (no gradients or glass effects), bento project grid, typing effect, scroll-reveal, animated counters, tier-based skill labels (**no fake percentages** — `Skill.tier_label()` returns honest tier text).
 - 🌙 **Dark & light themes:** animated toggle, persisted in localStorage, applied before first paint.
 - ✉️ **AJAX contact form** (`contact_submit`): stored in DB, shown in admin, optional email notifications.
@@ -151,6 +151,7 @@ kaman-portfolio/
 ├── static/                 # css, js, fonts (Vazirmatn), logo, robots.txt, llms.txt
 ├── cv_data.py              # THE cv content source (EN/FA/AR)
 ├── generate_cv.py          # renders media/cv/*.pdf via the site's own engine
+├── generate_llms.py        # regenerates static/llms-full.txt from the database
 ├── requirements.txt        # Django, Pillow, fpdf2
 └── manage.py
 ```

@@ -33,8 +33,12 @@ python manage.py runserver
 values inline. The production module, `kaman_portfolio/settings_prod.py`, reads
 its configuration from the environment — `DJANGO_SECRET_KEY`, `DJANGO_DEBUG`,
 `DJANGO_ALLOWED_HOSTS`, `DJANGO_CSRF_TRUSTED_ORIGINS`, `DJANGO_SSL_REDIRECT`,
-`DJANGO_HSTS_SECONDS`, `DJANGO_DB_NAME`, the `DJANGO_EMAIL_*` values and
+`DJANGO_HSTS_SECONDS`, `DJANGO_DB_NAME`, `DJANGO_SITE_DOMAIN`, `DJANGO_ADMIN_NAME`, the `DJANGO_EMAIL_*` values and
 `DJANGO_SERVER_EMAIL` — with a `.env` file next to `manage.py` as the fallback
+
+> Local development uses `kaman_portfolio/settings.py`, which intentionally
+> omits the two production middlewares (English-first landing and analytics
+> recording) — local behaviour differs from production in those two respects only.
 source. Copy `.env.example` to `.env` and fill it in; never commit the real
 file. Run the production stack with:
 
