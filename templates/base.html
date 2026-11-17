@@ -34,7 +34,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Mohammad Hasan Kaman",
-    "alternateName": "محمد حسن کمان",
+    "alternateName": "محمد حسن کمن",
     "url": "https://mhkaman.com/",
     "jobTitle": "Full-Stack Developer",
     "description": "Self-taught full-stack developer focused on AI applications, developer tooling and secure systems.",
@@ -56,7 +56,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=20261120">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=20261121">
   <script>
     (function () {
       const theme = localStorage.getItem('theme') || 'dark';
@@ -67,9 +67,6 @@
 <body>
   <div class="progress-bar" id="progressBar"></div>
   <div class="bg-fx" aria-hidden="true">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
     <div class="grid-overlay"></div>
   </div>
 
@@ -149,7 +146,8 @@
     </div>
   </footer>
 
-  <script src="{% static 'js/main.js' %}?v=20261120"></script>
+  <script>window.__msgs={sessionExpired:"{{ t.misc.session_expired }}",networkError:"{{ t.misc.network_error }}"}</script>
+  <script src="{% static 'js/main.js' %}?v=20261121"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-64X37R0DMF"></script>
   <script>
