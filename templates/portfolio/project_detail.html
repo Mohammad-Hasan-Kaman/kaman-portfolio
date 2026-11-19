@@ -3,6 +3,26 @@
 
 {% block title %}{% tf project 'title' %} — {% tf profile 'name' %}{% endblock %}
 
+{% block meta_desc %}{% tf project 'description' as d %}{{ d|truncatechars:170 }}{% endblock %}
+{% block og_title %}{% tf project 'title' %} — {% tf profile 'name' %}{% endblock %}
+{% block og_desc %}{% tf project 'description' as d %}{{ d|truncatechars:170 }}{% endblock %}
+{% block tw_title %}{% tf project 'title' %} — {% tf profile 'name' %}{% endblock %}
+{% block tw_desc %}{% tf project 'description' as d %}{{ d|truncatechars:170 }}{% endblock %}
+{% block head_extra %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "{% tf project 'title' as pt %}{{ pt|escapejs }}",
+    "description": "{% tf project 'description' as pd %}{{ pd|truncatechars:300|escapejs }}",
+    "url": "https://{{ SITE_DOMAIN }}{{ request.path }}",
+    "author": {"@type": "Person", "name": "Mohammad Hasan Kaman", "url": "https://mhkaman.com/"}{% if project.image %},
+    "image": "https://{{ SITE_DOMAIN }}{{ project.image.url }}"{% endif %}{% if project.live_url %},
+    "sameAs": "{{ project.live_url }}"{% endif %}
+  }
+  </script>
+{% endblock %}
+
 {% block content %}
 <section class="section project-detail">
   <div class="container">

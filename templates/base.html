@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{% tf profile 'tagline' %}">
+  <meta name="description" content="{% block meta_desc %}{% tf profile 'tagline' %}{% endblock %}">
   <title>{% block title %}{% tf profile 'name' %} — {% tf profile 'role' %}{% endblock %}</title>
 
   {# ---- Social share preview (WhatsApp/Telegram/LinkedIn/X) ---- #}
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{% block og_type %}website{% endblock %}">
   <meta property="og:site_name" content="MHKaman.com">
   <meta property="og:title" content="{% block og_title %}{% tf profile 'name' %} — {% tf profile 'role' %}{% endblock %}">
   <meta property="og:description" content="{% block og_desc %}{% tf profile 'tagline' %}{% endblock %}">
-  <meta property="og:url" content="https://mhkaman.com{% block og_path %}{% endblock %}">
+  <meta property="og:url" content="https://{{ SITE_DOMAIN }}{{ request.path }}">
   <meta property="og:image" content="https://mhkaman.com/static/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% tf profile 'name' %} — {% tf profile 'role' %}">
-  <meta name="twitter:description" content="{% tf profile 'tagline' %}">
-  <meta name="twitter:image" content="https://mhkaman.com{% if profile.avatar %}{{ profile.avatar.url }}{% else %}/static/img/logo.svg{% endif %}">
+  <meta name="twitter:title" content="{% block tw_title %}{% tf profile 'name' %} — {% tf profile 'role' %}{% endblock %}">
+  <meta name="twitter:description" content="{% block tw_desc %}{% tf profile 'tagline' %}{% endblock %}">
+  <meta name="twitter:image" content="https://mhkaman.com/static/img/og-image.png">
   <meta name="author" content="Mohammad Hasan Kaman">
   <link rel="canonical" href="https://{{ SITE_DOMAIN }}{{ request.path }}">
 
@@ -36,19 +36,23 @@
     "name": "Mohammad Hasan Kaman",
     "alternateName": "محمد حسن کمن",
     "url": "https://mhkaman.com/",
+    "image": "https://mhkaman.com/media/profile/profile.jpg",
     "jobTitle": "Full-Stack Developer",
     "description": "Self-taught full-stack developer focused on AI applications, developer tooling and secure systems.",
     "sameAs": [
       "https://github.com/Mohammad-Hasan-Kaman",
       "https://www.linkedin.com/in/kaman-programmer/",
       "https://x.com/kaman_hasan0975",
-      "https://t.me/mohaka0975"
+      "https://www.instagram.com/mohaka_programmer",
+      "https://t.me/mohaka0975",
+      "https://t.me/mohaka_programmer"
     ],
     "email": "mailto:mohammadhasankaman@gmail.com",
     "knowsAbout": ["Python", "Django", "C#", ".NET", "JavaScript", "AI Integration", "LLM", "Networking"],
     "knowsLanguage": ["en", "fa", "ar"]
   }
   </script>
+  {% block head_extra %}{% endblock %}
 
   <link rel="icon" type="image/svg+xml" href="{% static 'img/logo.svg' %}">
   <link rel="apple-touch-icon" href="{% static 'img/logo.svg' %}">

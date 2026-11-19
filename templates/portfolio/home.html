@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static portfolio_extras %}
 
+{% block meta_desc %}{{ t.seo.home_desc }}{% endblock %}
+{% block og_desc %}{{ t.seo.home_desc }}{% endblock %}
+{% block tw_desc %}{{ t.seo.home_desc }}{% endblock %}
+
 {% block content %}
 <!-- ============ HERO ============ -->
 <section class="hero" id="home">
@@ -162,7 +166,7 @@
       {% for project in featured_projects %}
       <article class="project-card glass reveal {% if forloop.counter0 == 0 %}span-2{% endif %}" data-category="{{ project.category }}">
         <a href="{% url 'portfolio:project_detail' project.slug %}" class="project-cover cat-{{ project.category }}" aria-label="{% tf project 'title' %} — {{ t.projects.details }}">
-          {% if project.image %}<img src="{{ project.image.url }}" alt="{% tf project 'title' %}">{% else %}
+          {% if project.image %}<img src="{{ project.image.url }}" alt="{% tf project 'title' %}" loading="lazy" decoding="async">{% else %}
           {% endif %}
           {% if project.live_url %}<span class="live-pill">● {{ t.misc.live }}</span>{% endif %}
         </a>
@@ -215,7 +219,7 @@
       {% for article in articles %}
       <article class="article-card glass reveal" style="--d: {{ forloop.counter0 }}00ms">
         <a href="{% url 'portfolio:article_detail' article.slug %}" class="article-cover" aria-hidden="true" tabindex="-1">
-          {% if article.cover %}<img src="{{ article.cover.url }}" alt="{% tf article 'title' %}">{% else %}
+          {% if article.cover %}<img src="{{ article.cover.url }}" alt="{% tf article 'title' %}" loading="lazy" decoding="async">{% else %}
           {% endif %}
         </a>
         <div class="article-body">

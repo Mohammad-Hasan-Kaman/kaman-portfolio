@@ -3,6 +3,29 @@
 
 {% block title %}{% tf article 'title' %} — {% tf profile 'name' %}{% endblock %}
 
+{% block meta_desc %}{% tf article 'excerpt' as e %}{% if e %}{{ e|truncatechars:170 }}{% else %}{% tf profile 'tagline' %}{% endif %}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block og_title %}{% tf article 'title' %} — {% tf profile 'name' %}{% endblock %}
+{% block og_desc %}{% tf article 'excerpt' as e %}{% if e %}{{ e|truncatechars:170 }}{% else %}{% tf profile 'tagline' %}{% endif %}{% endblock %}
+{% block tw_title %}{% tf article 'title' %} — {% tf profile 'name' %}{% endblock %}
+{% block tw_desc %}{% tf article 'excerpt' as e %}{% if e %}{{ e|truncatechars:170 }}{% else %}{% tf profile 'tagline' %}{% endif %}{% endblock %}
+{% block head_extra %}
+  <meta property="article:published_time" content="{{ article.created_at|date:'c' }}">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{% tf article 'title' as at %}{{ at|escapejs }}",
+    "description": "{% tf article 'excerpt' as ae %}{{ ae|truncatechars:300|escapejs }}",
+    "datePublished": "{{ article.created_at|date:'c' }}",
+    "author": {"@type": "Person", "name": "Mohammad Hasan Kaman", "url": "https://mhkaman.com/"},
+    "publisher": {"@type": "Person", "name": "Mohammad Hasan Kaman", "url": "https://mhkaman.com/"},
+    "mainEntityOfPage": "https://{{ SITE_DOMAIN }}{{ request.path }}"{% if article.cover %},
+    "image": "https://{{ SITE_DOMAIN }}{{ article.cover.url }}"{% endif %}
+  }
+  </script>
+{% endblock %}
+
 {% block content %}
 <section class="section article-detail">
   <div class="container article-container">

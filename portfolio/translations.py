@@ -4,6 +4,7 @@ STRINGS = {
     'en': {
         'dir': 'ltr',
         'nav': {'home': 'Home', 'about': 'About', 'skills': 'Skills', 'projects': 'Projects', 'articles': 'Articles', 'services': 'Services', 'cv': 'Resume', 'contact': 'Contact'},
+        'seo': {'home_desc': 'Mohammad Hasan Kaman — full-stack developer building AI applications, developer tools and secure systems with Python, Django and C#. Portfolio, projects and CV.', 'cv_desc': 'CV of Mohammad Hasan Kaman, full-stack developer — experience, skills and selected projects in Python, Django, C# and AI applications. Download the PDF resume.'},
         'cv': {
                     'title': 'Resume',
                     'subtitle': 'A quick overview of my experience, skills and work.',
@@ -68,6 +69,7 @@ STRINGS = {
     'fa': {
         'dir': 'rtl',
         'nav': {'home': 'خانه', 'about': 'درباره من', 'skills': 'مهارت‌ها', 'projects': 'پروژه‌ها', 'articles': 'یادداشت‌ها', 'services': 'خدمات', 'cv': 'رزومه', 'contact': 'تماس'},
+        'seo': {'home_desc': 'محمد حسن کمن، توسعه‌دهنده فول‌استک؛ سازندهٔ برنامه‌های هوش مصنوعی، ابزارهای توسعه و سیستم‌های امن با پایتون، جنگو و سی‌شارپ. پروژه‌ها، مقاله‌ها و رزومه.', 'cv_desc': 'رزومهٔ محمد حسن کمن، توسعه‌دهنده فول‌استک — تجربه، مهارت‌ها و پروژه‌های منتخب در پایتون، جنگو، سی‌شارپ و برنامه‌های هوش مصنوعی. دانلود نسخهٔ PDF رزومه.'},
         'cv': {
                     'title': 'رزومه',
                     'subtitle': 'مروری سریع بر تجربه، مهارت‌ها و پروژه‌های من.',
@@ -132,6 +134,7 @@ STRINGS = {
     'ar': {
         'dir': 'rtl',
         'nav': {'home': 'الرئيسية', 'about': 'نبذة عني', 'skills': 'المهارات', 'projects': 'المشاريع', 'articles': 'الملاحظات', 'services': 'الخدمات', 'cv': 'السيرة الذاتية', 'contact': 'تواصل'},
+        'seo': {'home_desc': 'محمد حسن كمن، مطوّر برمجيات متكاملة يبني تطبيقات الذكاء الاصطناعي وأدوات التطوير والأنظمة الآمنة باستخدام Python وDjango وC#. المشاريع والمقالات والسيرة الذاتية.', 'cv_desc': 'السيرة الذاتية لمحمد حسن كمن، مطوّر برمجيات متكاملة — الخبرة والمهارات ومشاريع مختارة في Python وDjango وC# وتطبيقات الذكاء الاصطناعي. تحميل السيرة الذاتية PDF.'},
         'cv': {
                     'title': 'السيرة الذاتية',
                     'subtitle': 'نظرة سريعة على خبرتي ومهاراتي وأعمالي.',
