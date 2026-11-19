@@ -86,7 +86,7 @@ class ProfileAdmin(admin.ModelAdmin):
         ('Core Competencies', {'fields': ['core_competencies_en', 'core_competencies_fa', 'core_competencies_ar'],
                         'description': 'Core competency bullet points shown on the CV page (one per line).'}),
         ('Contact', {'fields': ['email', 'phone', ('location_en', 'location_fa', 'location_ar')]}),
-        ('Social', {'fields': ['github', 'linkedin', 'twitter', 'telegram']}),
+        ('Social', {'fields': ['github', 'linkedin', 'twitter', 'telegram', 'instagram', 'telegram_channel']}),
         ('Media', {'fields': ['avatar', 'cv_file']}),
         ('Counters', {'fields': ['years_experience', 'projects_completed', 'happy_clients']}),
     ]

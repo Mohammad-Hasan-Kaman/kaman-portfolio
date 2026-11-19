@@ -29,6 +29,8 @@ class Profile(models.Model):
     linkedin = models.URLField(default='https://www.linkedin.com/in/kaman-programmer/')
     twitter = models.URLField(default='https://x.com/kaman_hasan0975')
     telegram = models.URLField(default='https://t.me/mohaka0975')
+    instagram = models.URLField(default='https://www.instagram.com/mohaka_programmer')
+    telegram_channel = models.URLField(default='https://t.me/mohaka_programmer')
 
     avatar = models.ImageField(upload_to='profile/', blank=True, null=True)
     cv_file = models.FileField(upload_to='cv/', blank=True, null=True)
