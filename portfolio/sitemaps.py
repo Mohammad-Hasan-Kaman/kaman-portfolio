@@ -81,6 +81,15 @@ class ArticleSitemap(_BaseSitemap):
         return f'/articles/{obj.slug}/'
 
 
+class ArticlesIndexSitemap(_BaseSitemap):
+    """The articles index page, in every language."""
+
+    priority = 0.7
+
+    def location(self, obj):
+        return '/articles/'
+
+
 class CvSitemap(_BaseSitemap):
     """The CV pages, in every language."""
 
@@ -94,5 +103,6 @@ sitemaps = {
     'static': StaticSitemap,
     'projects': ProjectSitemap,
     'articles': ArticleSitemap,
+    'articles_index': ArticlesIndexSitemap,
     'cv': CvSitemap,
 }

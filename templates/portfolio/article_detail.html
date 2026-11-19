@@ -29,7 +29,7 @@
 {% block content %}
 <section class="section article-detail">
   <div class="container article-container">
-    <a href="{% url 'portfolio:home' %}#articles" class="back-link reveal">← {{ t.articles.back }}</a>
+    <a href="{% url 'portfolio:article_list' %}" class="back-link reveal">← {{ t.articles.back }}</a>
 
     <div class="detail-info reveal">
       <span class="article-date">{% if LANG == 'fa' %}{{ article.created_at|date:"Y/m/d" }}{% else %}{{ article.created_at|date:"d M Y" }}{% endif %}</span>

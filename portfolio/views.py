@@ -62,6 +62,14 @@ def project_detail(request, slug):
     return render(request, 'portfolio/project_detail.html', context)
 
 
+def article_list(request):
+    context = {
+        'profile': get_profile(),
+        'articles': Article.objects.filter(published=True),
+    }
+    return render(request, 'portfolio/articles.html', context)
+
+
 def article_detail(request, slug):
     import markdown
     article = get_object_or_404(Article, slug=slug, published=True)

@@ -86,7 +86,7 @@
         <li><a href="{% url 'portfolio:home' %}#about">{{ t.nav.about }}</a></li>
         <li><a href="{% url 'portfolio:home' %}#skills">{{ t.nav.skills }}</a></li>
         <li><a href="{% url 'portfolio:home' %}#projects">{{ t.nav.projects }}</a></li>
-        <li><a href="{% url 'portfolio:home' %}#articles">{{ t.nav.articles }}</a></li>
+        <li><a href="{% url 'portfolio:article_list' %}">{{ t.nav.articles }}</a></li>
         <li><a href="{% url 'portfolio:home' %}#services">{{ t.nav.services }}</a></li>
         <li><a href="{% url 'portfolio:cv' %}">{{ t.nav.cv }}</a></li>
         <li><a href="{% url 'portfolio:home' %}#contact" class="nav-cta">{{ t.nav.contact }}</a></li>
@@ -129,7 +129,7 @@
         <ul>
           <li><a href="{% url 'portfolio:home' %}#about">{{ t.nav.about }}</a></li>
           <li><a href="{% url 'portfolio:home' %}#projects">{{ t.nav.projects }}</a></li>
-          <li><a href="{% url 'portfolio:home' %}#articles">{{ t.nav.articles }}</a></li>
+          <li><a href="{% url 'portfolio:article_list' %}">{{ t.nav.articles }}</a></li>
           <li><a href="{% url 'portfolio:home' %}#services">{{ t.nav.services }}</a></li>
           <li><a href="{% url 'portfolio:cv' %}">{{ t.nav.cv }}</a></li>
           <li><a href="{% url 'portfolio:home' %}#contact">{{ t.nav.contact }}</a></li>
