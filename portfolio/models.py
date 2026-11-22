@@ -28,7 +28,7 @@ class Profile(models.Model):
     github = models.URLField(default='https://github.com/Mohammad-Hasan-Kaman')
     linkedin = models.URLField(default='https://www.linkedin.com/in/kaman-programmer/')
     twitter = models.URLField(default='https://x.com/kaman_hasan0975')
-    telegram = models.URLField(default='https://t.me/mohaka0975')
+    telegram = models.URLField(default='https://t.me/mohakap')
     instagram = models.URLField(default='https://www.instagram.com/mohaka_programmer')
     telegram_channel = models.URLField(default='https://t.me/mohaka_programmer')
 

@@ -21,7 +21,7 @@ DATA = {
         'name': 'Mohammad Hasan Kaman',
         'role': 'Full-Stack Developer (Remote)',
         'contact': 'mohammadhasankaman@gmail.com   |   Germany (Remote)   |   Portfolio: mhkaman.com',
-        'links': 'linkedin.com/in/kaman-programmer    |    github.com/Mohammad-Hasan-Kaman    |    t.me/mohaka0975',
+        'links': 'linkedin.com/in/kaman-programmer    |    github.com/Mohammad-Hasan-Kaman    |    t.me/mohakap',
         'summary': 'Self-taught Full-Stack Developer with strong foundations in Python, C# and JavaScript, and 4 years of '
                    'hands-on experience shipping production-ready software — from AI-driven clinical screening '
                    'pipelines, LLM streaming diagnostics and encrypted desktop messengers to Django platforms deployed on '
@@ -111,7 +111,7 @@ DATA = {
         'name': 'محمد حسن کمن',
         'role': 'توسعه‌دهنده فول‌استک (دورکاری)',
         'contact': 'mohammadhasankaman@gmail.com   |   آلمان (دورکاری)   |   نمونه‌کار: mhkaman.com',
-        'links': 'linkedin.com/in/kaman-programmer    |    github.com/Mohammad-Hasan-Kaman    |    t.me/mohaka0975',
+        'links': 'linkedin.com/in/kaman-programmer    |    github.com/Mohammad-Hasan-Kaman    |    t.me/mohakap',
         'summary': 'توسعه‌دهنده فول‌استکِ خودآموخته با پایه‌ای قوی در پایتون، سی‌شارپ و جاوااسکریپت و ۴ سال تجربه '
                    'عملی در ساخت نرم‌افزارهای آمادهٔ پروداکشن — از خط لوله‌های غربال بالینی مبتنی بر هوش مصنوعی، '
                    'ابزارهای تشخیص خطای استریم LLM و پیام‌رسان‌های رمزنگاری‌شده تا پلتفرم‌های جنگو مستقر روی سرور '
@@ -196,7 +196,7 @@ DATA = {
         'name': 'محمد حسن كمن',
         'role': 'مطوّر برمجيات متكاملة (عن بُعد)',
         'contact': 'mohammadhasankaman@gmail.com   |   ألمانيا (عن بُعد)   |   الأعمال: mhkaman.com',
-        'links': 'linkedin.com/in/kaman-programmer    |    github.com/Mohammad-Hasan-Kaman    |    t.me/mohaka0975',
+        'links': 'linkedin.com/in/kaman-programmer    |    github.com/Mohammad-Hasan-Kaman    |    t.me/mohakap',
         'summary': 'مطوّر برمجيات متكاملة متعلّم ذاتياً بأساس متين في Python و C# و JavaScript وأربع سنوات من الخبرة '
                    'العملية في بناء برمجيات جاهزة للإنتاج — من خطوط فحص سريري مدعومة بالذكاء الاصطناعي، وأدوات تشخيص '
                    'بث LLM، ورسائل مشفّرة سطح المكتب، إلى منصات Django المنشورة على خوادم Linux مع nginx و gunicorn. '
